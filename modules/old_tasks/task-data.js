@@ -1,28 +1,28 @@
 //-------------------------------------
-m.before_submit=function(record,dbv){
-   var r=true; if(m.before_submit_2!=undefined) r=m.before_submit_2(record,dbv); if(r==false) { return false; }
-   if(record.Participant_uid!=""){
-       dbv.PUID=record.Participant_uid;
-       dbv.S3=$vm.status_of_data(record);
-   }
-   return r;
-};
-//-------------------------------------
+_json='';
 //-------------------------------------
 var prefix=$vm.module_list[$vm.vm['__ID'].name].prefix; if(prefix==undefined) prefix="";
 //-------------------------------------
-var participant_pid=$vm.module_list[prefix+'participant-data'].table_id;
-var notes_pid=$vm.module_list[prefix+'edc-notes-data'].table_id;
+var participant_pid=_mlist[prefix+'participant-data'].table_id;
+var notes_pid=_mlist[prefix+'task-notes'].table_id;
 var sql_participant="@('Initials')+' '+@('DOB')";
 var participant_info=function(record){ if(record.Initials!=undefined) return record.Initials+' '+record.DOB; else return record.UID; }
 //-------------------------------------
+_record_type="s2";
 var _task_fields='';
 //-------------------------------------
 var site_sql_where='';
 var site_array=[];
 var site_filter_and_request=function(){}
 //-------------------------------------
-m.set_req=function(){
+_set_req=function(){
+    if($vm.online_questionnaire===1){
+        _records=[];
+		$('#new__ID').triggerHandler('click');
+		var form=$('#grid__ID tr:nth-child(2)').find('u:first');
+		form.triggerHandler('click');
+        return;
+    }
     var participant_where="";
     var participant_uid="";
 	if($vm.vm['__ID'].input!=undefined) participant_uid=$vm.vm['__ID'].input.participant_uid;

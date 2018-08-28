@@ -1,32 +1,39 @@
-$('#back__ID').hide();
 //-------------------------------------
-var prefix=$vm.module_list[$vm.vm['__ID'].name].prefix; if(prefix==undefined) prefix="";
-var sql_participant="@('Initials')+' '+@('DOB')";
-var participant_tid	=$vm.module_list[prefix+'participant-data'].table_id;
+//haed code
+var participant_tid =$vm.module_list[m.prefix+'participant-data'].table_id;
+var participant_sql	="JSON_VALUE(Information,'$.Subject_Initials')+' '+JSON_VALUE(Information,'$.DOB')";
+var participant_name =function(p_record){ if(record.Subject_Initials!=undefined) return record.Subject_Initials+' '+record.DOB; else return record.UID;}
 //-------------------------------------
-$('#Participant__ID').autocomplete({
-    minLength:0,
-    source:function(request,response){
-        var sql="with tb as (select name="+sql_participant+",value2=UID,value3=S1 from [FORM-"+participant_tid+"])";
-        sql+=" select top 10 name,value=name,value2,value3 from tb where Name like '%'+@S1+'%' ";
-        $VmAPI.request({data:{cmd:'auto',s1:request.term,sql:sql,minLength:0},callback:function(res){
-            response($vm.autocomplete_list(res.table));
-        }});
-    },
-    select: function(event,ui){
-        $('#Participant_uid__ID').val(ui.item.value2);
-        $('#save__ID').css('background','#E00');
-    }
+var sql="with tb as (select name="+participant_sql+",value2=uid from [TABLE-"+participant_tid+"])";
+sql+=" select top 10 name,value=name,value2 from tb where Name like '%'+@S1+'%' ";
+$vm.autocomplete($('#Participant__ID'),sql,function(key,value){
+    $("#F__ID input[name="+key+"]").val($vm.text(value));
 })
-$('#Participant__ID').focus(function(){$('#Participant__ID').autocomplete("search","");});
-$('#Participant_r__ID').on('click',function(){$('#Participant__ID').val('');$('#Participant_uid__ID').val('');})
 //-------------------------------------
-var _task_fields;
-//-------------------------------------
-var _set_participant_field=function(){
-	$('#tr_participant__ID').show();
-	if($vm.online_questionnaire===1){
-		$('#tr_participant__ID').hide();
-	}
+m.load=function(){
+    m.input=$vm.vm['__ID'].input; if(m.input==undefined) m.input={};
+    $('#F__ID')[0].reset();
+    $('#submit__ID').show();
+    var task_record=m.input.task_record;
+    $vm.deserialize(task_record,'#F__ID');
+    //--------------------------
+    var participant_record=m.input.participant_record;
+    if(task_record==undefined && participant_record!=undefined && participant_record.UID!=undefined){
+        $("#F__ID input[name=Participant]").val(participant_record.UID+participant_name(participant_record));
+        $("#F__ID input[name=Participant_uid]").val(participant_record.UID);
+    }
+    $('#F__ID input[name=Participant]').prop('disabled',false); if($("#F__ID input[name=Participant_uid]").val()!='') $('#F__ID input[name=Participant]').prop('disabled',true);
+    //--------------------------
+    if(m.load_2!=undefined) m.load_2();
+    //--------------------------
 }
+//-------------------------------------
+m.before_submit=function(record,dbv){
+   var r=true; if(m.before_submit_2!=undefined) r=m.before_submit_2(record,dbv); if(r==false) { $('#submit__ID').show();return false; }
+   if(record.Participant_uid!=""){
+       dbv.PUID=record.Participant_uid;
+       dbv.S3=$vm.status_of_data(record);
+   }
+   return r;
+};
 //-------------------------------------

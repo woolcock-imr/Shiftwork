@@ -51,30 +51,22 @@
             if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost') $vm.localhost=true;
             //------------------------------------
             $vm.module_links=[
-                "https://shiftwork.org.org.au/modules/modules.json",
+                "https://shiftwork.rt.org.au/modules.json",
             ];
+            $vm.module_list={
+                "home": {"url":"https://shiftwork.rt.org.au/modules/home.html"},
+            }
+            //------------------------------------
             $vm.local_url=function(url){
                 var urlR=url;
                 if($vm.localhost==true){
-                    urlR=urlR.replace('https://shiftwork.org.org.au/','http://127.0.0.1:8000/woolcock-imr/shiftwork/');
+                    urlR=urlR.replace('https://shiftwork.rt.org.au/','http://127.0.0.1:8000/woolcock-imr/shiftwork/');
                 }
                 return urlR;
-            }
-            $vm.remote_url=function(url){
-                var urlR=url;
-                urlR=urlR.replace('http://127.0.0.1:8000/woolcock-imr/shiftwork/','https://shiftwork.org.org.au/');
-                return urlR;
-            }
-            $vm.module_list={
-                "home":   {"url":"_C_/modules/home.html"},
             }
             //------------------------------------
-            for(p in $vm.module_list){
-                if($vm.module_list[p].url!=undefined){
-                    if($vm.localhost) $vm.module_list[p].url=$vm.module_list[p].url.replace('_C_/','http://127.0.0.1:8000/woolcock-imr/shiftwork/');
-                    else              $vm.module_list[p].url=$vm.module_list[p].url.replace('_C_/','https://shiftwork.rt.org.au/');
-                }
-            }
+            for(p in $vm.module_links) $vm.module_links[p]=$vm.local_url($vm.module_links[p]);
+            for(p in $vm.module_list) $vm.module_list[p].url=$vm.local_url($vm.module_list[p].url);
             //------------------------------------
             $vm.start=function(){
                 $vm.init_v3({callback:function(){
@@ -112,14 +104,14 @@
             $vm.root_layout_content_slot='content'
             $vm.root_layout_footer='footer';
             //------------------------------------
-            var url1="https://www.vmiis.com/modules/starter/app.html";          if($vm.localhost) url1="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/starter/app.html";
-            var url2="https://www.vmiis.com/modules/menu/topbar-menu.html";     if($vm.localhost) url2="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/menu/topbar-menu.html";
+            var url1="https://www.vmiis.com/modules/starter/app.html";          //if($vm.localhost) url1="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/starter/app.html";
+            var url2="https://www.vmiis.com/modules/menu/topbar-menu.html";     //if($vm.localhost) url2="http://127.0.0.1:8000/vmiis/your-company-business-portal/modules/menu/topbar-menu.html";
             var urls=[url1,url2]; $vm.module_start_id=2;
             //---------------------------------------------
             $(urls).each(function(index,url){
                 var ver=localStorage.getItem(url+"ver");
                 var txt=localStorage.getItem(url+"txt");
-                if(ver!=$vm.ver[0] || txt==null || $vm.localhost==true){
+                if(ver!=$vm.ver[0] || txt==null || url.indexOf('http://127.0.0.1')!=-1){
                     $.get(url+'?_='+new Date().getTime(),function(new_txt){
                         localStorage.setItem(url+"txt",new_txt);
                         localStorage.setItem(url+"ver",$vm.ver[0]);

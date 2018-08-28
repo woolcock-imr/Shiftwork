@@ -32,9 +32,9 @@
 	function F__ID(){
 		//--------------------------------------------------------
 		var old_info='';
-		var record;
+		var participant_record;
 		var count={}
-		var participant_info=function(record){ return record.Initials+' '+record.DOB; }
+		var participant_info=function(record){ return record.Subject_Initials+' '+record.DOB; }
 		//--------------------------------------------------------
 		var set_li_text=function(){
 		    $('.nav__ID li').each(function(){
@@ -44,8 +44,12 @@
 		set_li_text();
 		//---------------------------------------------
 		$('#D__ID').on('load',function(){
-			record=$vm.vm['__ID'].input.record;
-			var info="Participant:"+participant_info(record);
+			participant_record=$vm.vm['__ID'].input.record;
+			if(participant_record==undefined){
+				$('#info__ID').text("No individual participant info was found.");
+				return;
+			}
+			var info="Participant:"+participant_info(participant_record);
 			if(old_info!=info){
 				old_info=info;
 				set_counting();
@@ -66,8 +70,8 @@
 			$('.nav__ID li').each(function(){
 				var $li=$(this);
 				var m=$li.attr('module');
-				if(count[record.UID.toString()]!==undefined){
-					var num=$('<div/>').html(count[record.UID.toString()][m]).text();
+				if(count[participant_record.UID.toString()]!==undefined){
+					var num=$('<div/>').html(count[participant_record.UID.toString()][m]).text();
 					if(num!=undefined){
 			            var txt=$('<div/>').html($li.attr('data-li_text')).text();
 			            $li.html(txt+" <mark style='font-size:9px'>["+num+"]</mark>")
@@ -90,7 +94,7 @@
 					return;
 				}
 				//$vm.load_module_v2(prefix+m,"",{participant_uid:record.UID,participant_name:participant_info(record)});
-				$vm.load_module_v2(prefix+m,"",{record:record});
+				$vm.load_module_v2(prefix+m,"",{record:participant_record});
 			}
 		})
 		//--------------------------------------------------------
@@ -117,13 +121,13 @@
 			if($vm.module_list[prefix+m]!=undefined){
 				var pid=$vm.module_list[prefix+m].table_id;
 				if(pid!=undefined){
-					var sql="select Num=count(ID) from [TABLE-"+pid+"] where PUID="+record.UID;
-					$VmAPI.request({data:{cmd:'query_records',sql:sql},callback:function(res){
-						if(count[record.UID.toString()]==undefined) count[record.UID.toString()]={}
-						count[record.UID.toString()][m]=res.records[0].Num;
+					var sql="select Num=count(ID) from [TABLE-"+pid+"] where PUID="+participant_record.UID;
+					$VmAPI.request({data:{cmd:'read',qid:$vm.qid,sql:sql},callback:function(res){
+						if(count[participant_record.UID.toString()]==undefined) count[participant_record.UID.toString()]={}
+						count[participant_record.UID.toString()][m]=res.records[0].Num;
 						var txt=$li.attr('data-li_text');
 			            txt=$('<div/>').html(txt).text();
-			            var num=$('<div/>').html(count[record.UID.toString()][m]).text();
+			            var num=$('<div/>').html(count[participant_record.UID.toString()][m]).text();
 			            $li.html(txt+" <mark style='font-size:9px'>["+num+"]</mark>")
 					}})
 				}

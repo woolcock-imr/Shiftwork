@@ -7,11 +7,11 @@
             <div class="row row__ID" id=row_participant__ID>
 				<div class="col-sm-12 col-lg-9">
 					<span class=label__ID>Participant</span><br>
-					<input name="Participant" class=form-control id=Participant__ID data-id="Participant" required>
+					<input name="Participant" class=form-control id=Participant__ID readonly>
 				</div>
 				<div class="col-sm-12 col-lg-3">
 					<span class=label__ID>Participant ID</span><br>
-					<input name="Participant_uid" class=form-control readonly>
+					<input name="Participant_uid" class=form-control id=Participant_uid__ID readonly>
 				</div>
 				<br>
 			</div>
@@ -52,24 +52,13 @@
         var prefix				=this_module.prefix;
         var form_tid      		=this_module.table_id;
         var participant_tid     =""; if($vm.module_list[prefix+'participant-data']!=undefined) participant_tid=$vm.module_list[prefix+'participant-data'].table_id;
-        var participant_sql		="Convert(varchar,UID)+'-'+JSON_VALUE(Information,'$.Subject_Initials')";
-        var participant_name    ="Subject_Initials";
+        var get_participant_name=function(record){return record.Subject_Initials;}
         var setup_record;
-        //-------------------------------------
-        /*
-        if(participant_tid!=undefined){
-        	var sql="with tb as (select name="+participant_sql+",value2=uid from [TABLE-"+participant_tid+"])";
-        	sql+=" select top 10 name,value=name,value2 from tb where Name like '%'+@S1+'%' ";
-        	$vm.autocomplete($('#Participant__ID'),sql,function(key,value){
-        		$("#F__ID input[name="+key+"]").val($vm.text(value));
-                if(key=='Participant_uid') $("#F__ID input[name=Login_ID]").val($vm.text(value)+"-"+form_tid);
-        	})
-        }
-        */
         //-------------------------------------
 		var setup_pid=this_module.table_id;
 		var q_list=undefined;
         if($vm.module_list[prefix+'quest_list']!=undefined) q_list=$vm.module_list[prefix+'quest_list'].list;
+        if(q_list==undefined){ $vm.alert("No questionnaire list was found"); return;}
         //---------------------------------------------
         $('#name__ID').text('Participant Login Setup');
         //---------------------------------------------
@@ -81,28 +70,32 @@
 		//---------------------------------------------
         var load_data=function(){
             setup_record={};
-            var record=$vm.vm['__ID'].input.record;
-            if(record==undefined || q_list==undefined){
+            var participant_record=$vm.vm['__ID'].input.record;
+            if(participant_record==undefined){
                 $('#submit__ID').hide();
+                $vm.alert("No participant info was found");
                 return;
             }
-            if(record!=undefined && record.UID!=undefined){
-                var sql="select top 1 Information from [TABLE-"+setup_pid+"] where PUID="+record.UID;
-                var req_data={ cmd:"read",qid:$vm.qid,sql:sql}
-                $VmAPI.request({data:req_data,callback:function(res){
-                    if(res.records.length>0){
-                        setup_record=res.records[0];
-                        $vm.deserialize(setup_record,'#F__ID');
-                        $('#row_participant__ID').prop("disabled",false); if(record.Participant!="" && record.Participant_uid=='') $('#row_participant__ID').prop("disabled",true);
-                    }
-                    else{
-                        $('#F__ID textarea[name=List]').val('');
-                        $('#F__ID input[name=Password').val($vm.vm_password(8,false));
-                    }
-    				set_check_list();
-                }})
+            if(participant_record.UID==undefined){
+                $vm.alert("No participant UID was found");
+                return;
             }
-            else set_check_list();
+            $('#Participant_uid__ID').val(participant_record.UID);
+            $('#Participant__ID').val(get_participant_name(participant_record));
+            var sql="select top 1 Information from [TABLE-"+setup_pid+"] where PUID="+participant_record.UID;
+            var req_data={ cmd:"read",qid:$vm.qid,sql:sql}
+            $VmAPI.request({data:req_data,callback:function(res){
+                if(res.records.length>0){
+                    setup_record=res.records[0];
+                    $vm.deserialize(setup_record,'#F__ID');
+                    //$('#row_participant__ID').prop("disabled",false); if(record.Participant!="" && record.Participant_uid=='') $('#row_participant__ID').prop("disabled",true);
+                }
+                else{
+                    $('#F__ID textarea[name=List]').val('');
+                    $('#F__ID input[name=Password').val($vm.vm_password(8,false));
+                }
+				set_check_list();
+            }})
         }
         //---------------------------------------------
         var set_check_list=function(){
@@ -120,7 +113,7 @@
                 for(k in sublist){
                     No++;
                     pid=sublist[k].table_id;
-                    task=sublist[k].name_for_search;
+                    task=sublist[k].task_name;
                     txt+="<tr><td>"+No+"</td><td>"+pid+"</td><td>"+tab+dot+task+"</td><td><input id=task__ID"+pid+" type=checkbox class=item__ID /></td></tr>";
                 }
             }
@@ -198,63 +191,19 @@
             set_list();
             //--------------------------------------------------------
         	var data=$vm.serialize('#F__ID');
-            if(data.Participant_uid==""){
-                $vm.alert('No participant was selected.');
-                $('#submit__ID').show();
-                return;
-            }
             var dbv={PUID:data.Participant_uid,S1:data.Participant,S2:data.Login_ID,S3:data.Password}
         	//--------------------------------------------------------
-            var sql="select top 1 ID from [TABLE-"+form_tid+"] where PUID="+data.Participant_uid;
-            var req_data={ cmd:"query_records", sql:sql}
-            $VmAPI.request({data:req_data,callback:function(res){
-                var rid=""; if(res.records.length>0)  var rid=res.records[0].ID;
-                var req={cmd:"add_json_record",db_pid:form_tid,data:data,dbv:dbv};
-            	if(rid!="") req={cmd:"modify_json_record",rid:rid,db_pid:form_tid,data:data,dbv:dbv};
-            	$VmAPI.request({data:req,callback:function(res){
-            		$vm.refresh=1;
-            		if(rid!=undefined) window.history.go(-1);
-            		else if($vm.vm['__ID'].input!=undefined && $vm.vm['__ID'].input.goback!=undefined) window.history.go(-1);
-            		else $vm.alert('Your data has been successfully submitted');
-            	}});
-            	//--------------------------------------------------------
-            }})
-
+            var rid=setup_record.ID;
+            var req={cmd:"add",qid:$vm.qid,db_pid:form_tid,data:data,dbv:dbv};
+            if(rid!=undefined){
+                req={cmd:"modify",rid:rid,qid:$vm.qid,db_pid:form_tid,data:data,dbv:dbv};
+            }
+            $VmAPI.request({data:req,callback:function(res){
+                $vm.refresh=1;
+                if(rid!=undefined) window.history.go(-1);
+            }});
         })
         //--------------------------------------------------------
-        /*
-        $('#save__ID').on('click', function(){
-            set_list();
-            var row_data={Login_ID:$('#F__ID input[name=Login_ID]').val(), Password:$('#F__ID input[name=Password]').val(),List:$('#List__ID').val()}
-            var dbv={PUID:record.UID,S1:$('#Participant__ID').val(),S2:$('#Login_ID__ID').val(),S3:$('#Password__ID').val()}
-            var sql="select top 1 ID from [TABLE-"+setup_pid+"] where PUID="+record.UID;
-            var req_data={ cmd:"query_records", sql:sql}
-            $VmAPI.request({data:req_data,callback:function(res){
-                if(res.records.length>0){
-                    var rid=res.records[0].ID;
-                    modify_record(row_data,dbv,rid);
-                }
-                else{
-                    add_record(row_data,dbv);
-                }
-            }})
-        })
-        //---------------------------------------------
-        var add_record=function(row_data,dbv){
-            var req={cmd:"add_json_record",db_pid:setup_pid.toString(),data:row_data,dbv:dbv};
-            $VmAPI.request({data:req,callback:function(res){
-				window.history.go(-1);
-            }});
-        }
-        //---------------------------------------------
-        var modify_record=function(row_data,dbv,rid){
-            var req={cmd:"modify_json_record",rid:rid,db_pid:setup_pid.toString(),data:row_data,dbv:dbv};
-            $VmAPI.request({data:req,callback:function(res){
-				window.history.go(-1);
-            }});
-        }
-        */
-        //---------------------------------------------
     }
 </script>
 <style>

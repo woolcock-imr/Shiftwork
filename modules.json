@@ -13,6 +13,10 @@
 		"participant-login-setup":	{"table_id":"20007821",		"url":"https://shiftwork.rt.org.au/modules/participant-and-others/participant-login-setup.html"},
 
 
+		"day1-date-of-visit-data":	 	{"table_id":"20011208",		"url":"https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",	"form_module":"day1-date-of-visit-form"},
+		"day1-date-of-visit-form":	 	{"table_id":"20011208",		"url":"https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html"},
+
+
 		"Ethnicity" : {"table_id" : "20011120","url":"https://shiftwork.rt.org.au/modules/tasks/ethnicity.html","task" : "Ethnicity","form_module" : "Ethnicity_form"},
 	 	"Ethnicity_form" : {"table_id" : "20011120","url":"https://shiftwork.rt.org.au/modules/tasks/ethnicity.form.html"},
 	 	"Lifestyle" : {"table_id" : "20011121","url":"https://shiftwork.rt.org.au/modules/tasks/lifestyle.html","task" : "Lifestyle","form_module" : "Lifestyle_form"},
