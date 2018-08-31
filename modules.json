@@ -16,12 +16,8 @@
 		"day1-date-of-visit-data":	 	{"table_id":"20011208",		"url":"https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",	"form_module":"day1-date-of-visit-form"},
 		"day1-date-of-visit-form":	 	{"table_id":"20011208",		"url":"https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html"},
 
-
-		"Ethnicity" : {"table_id" : "20011120","url":"https://shiftwork.rt.org.au/modules/tasks/ethnicity.html","task" : "Ethnicity","form_module" : "Ethnicity_form"},
-	 	"Ethnicity_form" : {"table_id" : "20011120","url":"https://shiftwork.rt.org.au/modules/tasks/ethnicity.form.html"},
-	 	"Lifestyle" : {"table_id" : "20011121","url":"https://shiftwork.rt.org.au/modules/tasks/lifestyle.html","task" : "Lifestyle","form_module" : "Lifestyle_form"},
-		"Lifestyle_form" : {"table_id" : "20011121","url":"https://shiftwork.rt.org.au/modules/tasks/lifestyle.form.html"},
-		"Education" : { "table_id" : "20011204","url":"https://shiftwork.rt.org.au/modules/tasks/education.html","task" : "Education","form_module" : "Education_form"},
+		"s-medical-history-data":	 	{"table_id":"1808310931",	"url":"https://shiftwork.rt.org.au/modules/tasks/medical-history-data.html",	"form_module":"s-medical-history-form"},
+		"s-medical-history-form":	 	{"table_id":"1808310931",	"url":"https://shiftwork.rt.org.au/modules/tasks/medical-history-form.html"	},
 
 		"quest_list":{
 			"list":{
