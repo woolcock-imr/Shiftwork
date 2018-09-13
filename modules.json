@@ -1,449 +1,1977 @@
 {
-	"modules":
-	{
+	"modules": {
 
-    	"main":   {"url":"https://shiftwork.rt.org.au/modules/panels/main.html"},
-  		"child":  {"url":"https://shiftwork.rt.org.au/modules/panels/child.html"},
-		"quest":  {"url":"https://shiftwork.rt.org.au/modules/panels/quest.html"},
+		"main": {
+			"url": "https://shiftwork.rt.org.au/modules/panels/main.html"
+		},
+		"child": {
+			"url": "https://shiftwork.rt.org.au/modules/panels/child.html"
+		},
+		"quest": {
+			"url": "https://shiftwork.rt.org.au/modules/panels/quest.html"
+		},
 
-		"participant-data":     	{"table_id":"20007819",     "url":"https://shiftwork.rt.org.au/modules/participant-and-others/participant-data.html", 	"form_module":"participant-form"},
-		"participant-form":     	{"table_id":"20007819",     "url":"https://shiftwork.rt.org.au/modules/participant-and-others/participant-form.html"},
-		"edc-notes-data":	  		{"table_id":"20007822",		"url":"https://shiftwork.rt.org.au/modules/participant-and-others/edc-notes-data.html",		"form_module":"edc-notes-form"},
-		"edc-notes-form":	  		{"table_id":"20007822",		"url":"https://shiftwork.rt.org.au/modules/participant-and-others/edc-notes-form.html"},
-		"participant-login-setup":	{"table_id":"20007821",		"url":"https://shiftwork.rt.org.au/modules/participant-and-others/participant-login-setup.html"},
-
-
-		"day1-date-of-visit-data":	 	{"table_id":"20011208",		"url":"https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",	"form_module":"day1-date-of-visit-form"},
-		"day1-date-of-visit-form":	 	{"table_id":"20011208",		"url":"https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html"},
-
-		"s-medical-history-data":	 	{"table_id":"1808310931",	"url":"https://shiftwork.rt.org.au/modules/tasks/medical-history-data.html",	"form_module":"s-medical-history-form"},
-		"s-medical-history-form":	 	{"table_id":"1808310931",	"url":"https://shiftwork.rt.org.au/modules/tasks/medical-history-form.html"	},
-
-		!!!FUNSTARTSHERE---remembertodeleteotherwiseyoullgetanerror!!
-
-		"screening_medical_history": {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Medical History", "form_module" : "screening_medical_history_form"},
-		"screening_medical_history_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-
-		"screening_anthropometry": {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Anthropometry",
-		"screening_conmeds": {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Concomitant Medication",
-		"screening_glucose_triglycerides": {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Glucose and Triglycerides",
-		"screening_MAPI": {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Multivariate Apnea Prediction Index", "form_module" : "screening_MAPI_form"},
-		"screening_MAPI_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"screening_POMS": {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Profile of Mood States questionnaire","form_module" : "screening_POMS_form"},
-		"screening_POMS_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-
-		"screening_visitdate" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Visit Date",
-		"day_visitdate" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Visit Date",
-		"night1_visitdate" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Visit Date",
-		"night2_visitdate" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Visit Date",
-		"night3_visitdate" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Visit Date",
-
-		"day_actiwatch" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Actiwatch Upload Day Shift",
-		"night_actiwatch" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Actiwatch Upload Night Shift",
-
-		"day_sleepdiary" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleep Diary Day Shift",
-		"night_sleepdiary" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleep Diary Night Shift",
-
-		"day_ausedupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "AusEd Upload Day Shift",
-		"night1_ausedupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "AusEd Upload Night Shift 1",
-		"night2_ausedupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Aused Upload Night Shift 2",
-		"night3_ausedupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "AusEd Upload Night Shift 3",
-
-		"day_kdtupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "KDT Upload Day Shift",
-		"night1_kdtupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "KDT Upload Night Shift 1",
-		"night3_kdtupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "KDT Upload Night Shift 3",
-
-		"day_psgupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "PSG Upload Day Shift",
-		"night1_psgupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "PSG Upload Night Shift 1",
-		"night3_psgupload" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "PSG Upload Night Shift 3",
-
-
-
-		"7am_day_hungerappetite" : {"table_id" : "1808310932","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"7am_day_hungerappetite_form" : {"table_id" : "1808310932",	"url" : "tasks/ethnicity.form.html"},
-		"8am_day_hungerappetite" : {"table_id" : "1808310933","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"8am_day_hungerappetite_form" : {"table_id" : "1808310933",	"url" : "tasks/ethnicity.form.html"},
-		"9am_day_hungerappetite" : {"table_id" : "1808310934","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"9am_day_hungerappetite_form" : {"table_id" : "1808310935",	"url" : "tasks/ethnicity.form.html"},
-		"10am_day_hungerappetite" : {"table_id" : "1808310936","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"10am_day_hungerappetite_form" : {"table_id" : "1808310937",	"url" : "tasks/ethnicity.form.html"},
-		"11am_day_hungerappetite" : {"table_id" : "1808310938","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"11am_day_hungerappetite_form" : {"table_id" : "1808310938",	"url" : "tasks/ethnicity.form.html"},
-		"12noon_day_hungerappetite" : {"table_id" : "1808310939","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"12noon_day_hungerappetite_form" : {"table_id" : "1808310939",	"url" : "tasks/ethnicity.form.html"},
-		"1pm_day_hungerappetite" : {"table_id" : "1808310940","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"1pm_day_hungerappetite_form" : {"table_id" : "1808310940",	"url" : "tasks/ethnicity.form.html"},
-		"2pm_day_hungerappetite" : {"table_id" : "1808310941","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"2pm_day_hungerappetite_form" : {"table_id" : "1808310941",	"url" : "tasks/ethnicity.form.html"},
-		"3pm_day_hungerappetite" : {"table_id" : "1808310942","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"3pm_day_hungerappetite_form" : {"table_id" : "1808310942",	"url" : "tasks/ethnicity.form.html"},
-		"4pm_day_hungerappetite" : {"table_id" : "1808310943","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"4pm_day_hungerappetite_form" : {"table_id" : "1808310943",	"url" : "tasks/ethnicity.form.html"},
-		"5pm_day_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"5pm_day_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"6pm_day_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"6pm_day_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"7pm_day_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"7pm_day_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"8pm_day_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"8pm_day_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"7pm_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_night1_hungerappetite_form"},
-		"7pm_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"8pm_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"8pm_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"9pm_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"10pm_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"10pm_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"11pm_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"12noon_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"12noon_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"1am_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"2am_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"2am_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"3am_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"3am_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"4am_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"4am_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"5am_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"6am_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"6am_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"7am_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"8am_night1_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"8am_night1_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"7pm_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_night2_hungerappetite_form"},
-		"7pm_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"8pm_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"8pm_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"9pm_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"10pm_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"10pm_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"11pm_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"12noon_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"12noon_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"1am_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"2am_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"2am_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"3am_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"3am_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"4am_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"4am_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"5am_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"6am_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"6am_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"7am_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"8am_night2_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"8am_night2_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"7pm_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_night3_hungerappetite_form"},
-		"7pm_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"8pm_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"8pm_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"9pm_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"10pm_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"10pm_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"11pm_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"12noon_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"12noon_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"1am_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"2am_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"2am_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"3am_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"3am_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"4am_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"4am_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"5am_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"6am_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"6am_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"7am_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-		"8am_night3_hungerappetite" : {"table_id" : "1808310931","url" : "tasks/ethnicity.html","task" : "7pm Hunger and Appetite","form_module" : "7pm_day_hungerappetite_form"},
-		"8am_night3_hungerappetite_form" : {"table_id" : "1808310931",	"url" : "tasks/ethnicity.form.html"},
-
-		"7am_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Sleepiness","form_module" : "7am_day_kss_form"},
-		"7am_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"8am_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am Sleepiness","form_module" : "8am_day_kss_form"},
-		"8am_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"9am_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "9am Sleepiness","form_module" : "9am_day_kss_form"},
-		"9am_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"10am_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10am Sleepiness","form_module" : "10am_day_kss_form"},
-		"10am_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"11am_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11am Sleepiness","form_module" : "11am_day_kss_form"},
-		"11am_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"12noon_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "12noon Sleepiness","form_module" : "12noon_day_kss_form"},
-		"12noon_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"1pm_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1pm Sleepiness","form_module" : "1pm_day_kss_form"},
-		"1pm_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"2pm_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "2pm Sleepiness","form_module" : "2pm_day_kss_form"},
-		"2pm_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"day_prekdt_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleepiness Pre KDT","form_module" : "day_prekdt_kss_form"},
-		"day_prekdtkss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"day_postkdt_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleepiness Post KDT","form_module" : "day_postkdt_kss_form"},
-		"day_postkdt_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"3pm_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "3pm Sleepiness","form_module" : "3pm_day_kss_form"},
-		"3pm_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"4pm_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4pm Sleepiness","form_module" : "4pm_day_kss_form"},
-		"4pm_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"5pm_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5pm Sleepiness","form_module" : "5pm_day_kss_form"},
-		"5pm_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"6pm_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "6pm Sleepiness","form_module" : "6pm_day_kss_form"},
-		"6pm_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7pm_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7pm Sleepiness","form_module" : "7pm_day_kss_form"},
-		"7pm_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"8pm_day_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8pm Sleepiness","form_module" : "8pm_day_kss_form"},
-		"8pm_day_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "9pm Sleepiness","form_module" : "9pm_night1_kss_form"},
-		"9pm_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"10pm_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10pm Sleepiness","form_module" : "10pm_night1_kss_form"},
-		"10pm_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11pm Sleepiness","form_module" : "11pm_night1_kss_form"},
-		"11pm_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"12midnight_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "12midnight Sleepiness","form_module" : "12midnight_night1_kss_form"},
-		"12midnight_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1am Sleepiness","form_module" : "1am_night1_kss_form"},
-		"1am_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"2am_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "2am Sleepiness","form_module" : "2am_night1_kss_form"},
-		"2am_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"night1_prekdt_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleepiness Pre KDT","form_module" : "night1_prekdt_kss_form"},
-		"night1_prekdt_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"night1_postkdt_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleepiness Post KDT","form_module" : "night1_postkdt_kss_form"},
-		"night1_postkdt_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"3am_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "3am Sleepiness","form_module" : "3am_night1_kss_form"},
-		"3am_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"4am_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4am Sleepiness","form_module" : "4am_night1_kss_form"},
-		"4am_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5am Sleepiness","form_module" : "5am_night1_kss_form"},
-		"5am_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"6am_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "6am Sleepiness","form_module" : "6am_night1_kss_form"},
-		"6am_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Sleepiness","form_module" : "7am_night1_kss_form"},
-		"7am_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"8am_night1_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am Sleepiness","form_module" : "8am_night1_kss_form"},
-		"8am_night1_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7pm_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7pm Sleepiness","form_module" : "7pm_night2_kss_form"},
-		"7pm_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"8pm_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8pm Sleepiness","form_module" : "8pm_night2_kss_form"},
-		"8pm_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "9pm Sleepiness","form_module" : "9pm_night2_kss_form"},
-		"9pm_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"10pm_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10pm Sleepiness","form_module" : "10pm_night2_kss_form"},
-		"10pm_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11pm Sleepiness","form_module" : "11pm_night2_kss_form"},
-		"11pm_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"12midnight_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "12midnight Sleepiness","form_module" : "12midnight_night2_kss_form"},
-		"12midnight_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1am Sleepiness","form_module" : "1am_night2_kss_form"},
-		"1am_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"2am_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "2am Sleepiness","form_module" : "2am_night2_kss_form"},
-		"2am_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"night2_prekdt_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleepiness Pre KDT","form_module" : "night2_prekdt_kss_form"},
-		"night2_prekdt_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"night2_postkdt_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleepiness Post KDT","form_module" : "night2_postkdt_kss_form"},
-		"night2_postkdt_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"3am_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "3am Sleepiness","form_module" : "3am_night2_kss_form"},
-		"3am_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"4am_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4am Sleepiness","form_module" : "4am_night2_kss_form"},
-		"4am_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5am Sleepiness","form_module" : "5am_night2_kss_form"},
-		"5am_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"6am_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "6am Sleepiness","form_module" : "6am_night2_kss_form"},
-		"6am_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Sleepiness","form_module" : "7am_night2_kss_form"},
-		"7am_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"8am_night2_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am Sleepiness","form_module" : "8am_night2_kss_form"},
-		"8am_night2_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7pm_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7pm Sleepiness","form_module" : "7pm_night3_kss_form"},
-		"7pm_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"8pm_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8pm Sleepiness","form_module" : "8pm_night3_kss_form"},
-		"8pm_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "9pm Sleepiness","form_module" : "9pm_night3_kss_form"},
-		"9pm_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"10pm_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10pm Sleepiness","form_module" : "10pm_night3_kss_form"},
-		"10pm_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11pm Sleepiness","form_module" : "11pm_night3_kss_form"},
-		"11pm_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"12midnight_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "12midnight Sleepiness","form_module" : "12midnight_night3_kss_form"},
-		"12midnight_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1am Sleepiness","form_module" : "1am_night3_kss_form"},
-		"1am_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"2am_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "2am Sleepiness","form_module" : "2am_night3_kss_form"},
-		"2am_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"night3_prekdt_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleepiness Pre KDT","form_module" : "night3_prekdt_kss_form"},
-		"night3_prekdt_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"night3_postkdt_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "Sleepiness Post KDT","form_module" : "night3_postkdt_kss_form"},
-		"night3_postkdt_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"3am_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "3am Sleepiness","form_module" : "3am_night3_kss_form"},
-		"3am_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"4am_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4am Sleepiness","form_module" : "4am_night3_kss_form"},
-		"4am_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5am Sleepiness","form_module" : "5am_night3_kss_form"},
-		"5am_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"6am_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "6am Sleepiness","form_module" : "6am_night3_kss_form"},
-		"6am_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Sleepiness","form_module" : "7am_night3_kss_form"},
-		"7am_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"8am_night3_kss" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am Sleepiness","form_module" : "8am_night3_kss_form"},
-		"8am_night3_kss_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-
-		"9am_day_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "9am Choice Reaction Time","form_module" : "9am_day_crt_form"},
-		"9am_day_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"11am_day_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11am Choice Reaction Time","form_module" : "11am_day_crt_form"},
-		"11am_day_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"1pm_day_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1pm Choice Reaction Time","form_module" : "1pm_day_crt_form"},
-		"1pm_day_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"5pm_day_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5pm Choice Reaction Time","form_module" : "5pm_day_crt_form"},
-		"5pm_day_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7pm_day_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7pm Choice Reaction Time","form_module" : "7pm_day_crt_form"},
-		"7pm_day_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night1_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "9pm Choice Reaction Time","form_module" : "9pm_night1_crt_form"},
-		"9pm_night1_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night1_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11pm Choice Reaction Time","form_module" : "11pm_night1_crt_form"},
-		"11pm_night1_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night1_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1am Choice Reaction Time","form_module" : "1am_night1_crt_form"},
-		"1am_night1_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night1_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5am Choice Reaction Time","form_module" : "5am_night1_crt_form"},
-		"5am_night1_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night1_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Choice Reaction Time","form_module" : "7am_night1_crt_form"},
-		"7am_night1_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night2_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "9pm Choice Reaction Time","form_module" : "9pm_night2_crt_form"},
-		"9pm_night2_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night2_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11pm Choice Reaction Time","form_module" : "11pm_night2_crt_form"},
-		"11pm_night2_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night2_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1am Choice Reaction Time","form_module" : "1am_night2_crt_form"},
-		"1am_night2_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night2_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5am Choice Reaction Time","form_module" : "5am_night2_crt_form"},
-		"5am_night2_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night2_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Choice Reaction Time","form_module" : "7am_night2_crt_form"},
-		"7am_night2_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"9pm_night3_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "9pm Choice Reaction Time","form_module" : "9pm_night3_crt_form"},
-		"9pm_night3_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"11pm_night3_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11pm Choice Reaction Time","form_module" : "11pm_night3_crt_form"},
-		"11pm_night3_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"1am_night3_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1am Choice Reaction Time","form_module" : "1am_night3_crt_form"},
-		"1am_night3_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"5am_night3_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5am Choice Reaction Time","form_module" : "5am_night3_crt_form"},
-		"5am_night3_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"7am_night3_crt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Choice Reaction Time","form_module" : "7am_night3_crt_form"},
-		"7am_night3_crt_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-
-		"8am_day_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am PVT Upload","form_module" : "8am_day_pvt_form"},
-		"10am_day_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10am PVT Upload","form_module" : "10am_day_pvt_form"},
-		"12noon_day_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "12noon PVT Upload","form_module" : "12noon_day_pvt_form"},
-		"2pm_day_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "2pm PVT Upload","form_module" : "2pm_day_pvt_form"},
-		"4pm_day_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4pm PVT Upload","form_module" : "4pm_day_pvt_form"},
-		"6pm_day_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "6pm PVT Upload","form_module" : "6pm_day_pvt_form"},
-		"8pm_day_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8pm PVT Upload","form_module" : "8pm_day_pvt_form"},
-		"8pm_night1_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8pm PVT Upload","form_module" : "8pm_night1_pvt_form"},
-		"10pm_night1_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10pm PVT Upload","form_module" : "10pm_night1_pvt_form"},
-		"12midnight_night1_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "12midnight PVT Upload","form_module" : "12midnight_night1_pvt_form"},
-		"2am_night1_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "2am PVT Upload","form_module" : "2am_night1_pvt_form"},
-		"4am_night1_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4am PVT Upload","form_module" : "4am_night1_pvt_form"},
-		"6am_night1_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "6am PVT Upload","form_module" : "6am_night1_pvt_form"},
-		"8am_night1_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am PVT Upload","form_module" : "8am_night1_pvt_form"},
-		"8pm_night2_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8pm PVT Upload","form_module" : "8pm_night2_pvt_form"},
-		"10pm_night2_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10pm PVT Upload","form_module" : "10pm_night2_pvt_form"},
-		"12midnight_night2_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "12midnight PVT Upload","form_module" : "12midnight_night2_pvt_form"},
-		"2am_night2_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "2am PVT Upload","form_module" : "2am_night2_pvt_form"},
-		"4am_night2_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4am PVT Upload","form_module" : "4am_night2_pvt_form"},
-		"6am_night2_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "6am PVT Upload","form_module" : "6am_night2_pvt_form"},
-		"8am_night2_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am PVT Upload","form_module" : "8am_night2_pvt_form"},
-		"8pm_night3_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8pm PVT Upload","form_module" : "8pm_night3_pvt_form"},
-		"10pm_night3_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10pm PVT Upload","form_module" : "10pm_night3_pvt_form"},
-		"12midnight_night3_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "12midnight PVT Upload","form_module" : "12midnight_night3_pvt_form"},
-		"2am_night3_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "2am PVT Upload","form_module" : "2am_night3_pvt_form"},
-		"4am_night3_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4am PVT Upload","form_module" : "4am_night3_pvt_form"},
-		"6am_night3_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "6am PVT Upload","form_module" : "6am_night3_pvt_form"},
-		"8am_night3_pvt" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am PVT Upload","form_module" : "8am_night3_pvt_form"},
-
-		"7am_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Glucose and Triglycerides",
-		"830am_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am Glucose and Triglycerides",
-		"10am_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10am Glucose and Triglycerides",
-		"11am_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11am Glucose and Triglycerides",
-		"1pm_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1pm Glucose and Triglycerides",
-		"230pm_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "230pm Glucose and Triglycerides",
-		"3pm_day_glucosetriglycerides_form" : {"table_id" : "20011120",	"url" : "tasks/ethnicity.form.html"},
-		"4pm_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4pm Glucose and Triglycerides",
-		"5pm_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5pm Glucose and Triglycerides",
-		"7pm_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7pm Glucose and Triglycerides",
-		"830pm_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "830pm Glucose and Triglycerides",
-		"10pm_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10pm Glucose and Triglycerides",
-		"11pm_day_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11pm Glucose and Triglycerides",
-		"7pm_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7pm Glucose and Triglycerides",
-		"830pm_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "830pm Glucose and Triglycerides",
-		"10pm_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10pm Glucose and Triglycerides",
-		"11pm_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11pm Glucose and Triglycerides",
-		"1am_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "1am Glucose and Triglycerides",
-		"230am_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "230am Glucose and Triglycerides",
-		"4am_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "4am Glucose and Triglycerides",
-		"5am_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "5am Glucose and Triglycerides",
-		"7am_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "7am Glucose and Triglycerides",
-		"830am_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "8am Glucose and Triglycerides",
-		"10am_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "10am Glucose and Triglycerides",
-		"11am_night3_glucosetriglycerides" : {"table_id" : "20011120","url" : "tasks/ethnicity.html","task" : "11am Glucose and Triglycerides",
+		"participant-data": {
+			"table_id": "20007819",
+			"url": "https://shiftwork.rt.org.au/modules/participant-and-others/participant-data.html",
+			"form_module": "participant-form"
+		},
+		"participant-form": {
+			"table_id": "20007819",
+			"url": "https://shiftwork.rt.org.au/modules/participant-and-others/participant-form.html"
+		},
+		"edc-notes-data": {
+			"table_id": "20007822",
+			"url": "https://shiftwork.rt.org.au/modules/participant-and-others/edc-notes-data.html",
+			"form_module": "edc-notes-form"
+		},
+		"edc-notes-form": {
+			"table_id": "20007822",
+			"url": "https://shiftwork.rt.org.au/modules/participant-and-others/edc-notes-form.html"
+		},
+		"participant-login-setup": {
+			"table_id": "20007821",
+			"url": "https://shiftwork.rt.org.au/modules/participant-and-others/participant-login-setup.html"
+		},
 
 
 
 
-		"quest_list":{
-			"list":{
-				"General information":[
-					{"table_id":"1808310931","task_name":"Ethnicity"},
-                    {"table_id":"20011121","task_name":"Lifestyle"},
-                    {"table_id":"20011204","task_name":"Education"},
-                    {"table_id":"20011205","task_name":"Medical_history"}
+
+		"day_visitdate": {
+			"table_id": "180900001",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",
+			"form_module": "day1-date-of-visit-form"
+		},
+		"day1-date-of-visit-form": {
+			"table_id": "20011208",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html"
+		},
+
+		"s-medical-history-data": {
+			"table_id": "1808310931",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/medical-history-data.html",
+			"form_module": "s-medical-history-form"
+		},
+		"s-medical-history-form": {
+			"table_id": "1808310931",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/medical-history-form.html"
+		},
+
+
+					"ABOVE ARE EXAMPLES ONLY":{},
+
+
+					"SCREENING VISIT":{},
+
+		"Screening_Medical_History": {
+			"table_id": "1809051147",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/medical-history.html",
+			"task": "Medical History",
+			"form_module": "screening_medical_history_form"
+		},
+		"screening_medical_history_form": {
+			"table_id": "1809051147",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/medical-history-form.html"
+		},
+
+		"Screening_anthropometry": {
+			"table_id": "1809051148",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/anthro.html",
+			"task": "Anthropometry",
+			"form_module": "screening_anthro"
+		},
+		"screening_anthro": {
+			"table_id":"1809051148",
+			"url":"https://shiftwork.rt.org.au/modules/tasks/anthro-form.html"
+		},
+		"screening_conmeds": {
+			"table_id": "1809051149",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/concom_meds.html",
+			"task": "Concomitant Medication"
+		},
+		"Screening_Glucose_Triglycerides": {
+			"table_id": "1809051150",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+			"task": "Glucose and Triglycerides",
+			"form":"screening_gluctri_form"
+		},
+		"screening_gluctri_form": {
+			"table_id": "1809051150",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri-form.html",
+			"task": "Glucose and Triglycerides"
+		},
+		"screening_MAPI": {
+			"table_id": "1809051150",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/mapi.html",
+			"task": "Multivariate Apnea Prediction Index",
+			"form_module": "screening_MAPI_form"
+		},
+		"screening_MAPI_form": {
+			"table_id": "1809051150",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/mapi-form.html"
+		},
+		"screening_POMS": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "Profile of Mood States questionnaire",
+			"form_module": "screening_POMS_form"
+		},
+		"screening_POMS_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"screening_day_visitdate": {
+			"table_id": "1809112202",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",
+			"task": "Visit Date",
+			"form_module":"screening_visitdate_form"
+		},
+		"screening_visitdate": {
+			"table_id": "1809112202",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html",
+			"task": "Visit Date"
+		},
+		"day_visitdate": {
+			"table_id": "1809112203",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",
+			"task": "Visit Date",
+			"form_module":"day_visitdate_form"
+		},
+		"day_visitdate_form": {
+			"table_id": "1809112203",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html",
+			"task": "Visit Date"
+		},
+		"night1_visitdate": {
+			"table_id": "1809112204",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",
+			"task": "Visit Date",
+			"form":"night1_visitdate_form"
+		},
+		"night1_visitdate_form": {
+			"table_id": "1809112204",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html",
+			"task": "Visit Date"
+		},
+		"night2_visitdate": {
+			"table_id": "1809112205",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",
+			"task": "Visit Date",
+			"form":"night2_visitdate_form"
+		},
+		"night2_visitdate_form": {
+			"table_id": "1809112205",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html",
+			"task": "Visit Date"
+		},
+		"night3_visitdate": {
+			"table_id": "1809112206",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-data.html",
+			"task": "Visit Date",
+			"form":"night3_visitdate_form"
+		},
+		"night3_visitdate_form": {
+			"table_id": "1809112206",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html",
+			"task": "Visit Date"
+		},
+		"day_actiwatch": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "Actiwatch Upload Day Shift"
+		},
+		"night_actiwatch": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "Actiwatch Upload Night Shift"
+		},
+		"day_sleepdiary": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "Sleep Diary Day Shift"
+		},
+		"night_sleepdiary": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "Sleep Diary Night Shift"
+		},
+		"day_ausedupload": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "AusEd Upload Day Shift"
+		},
+		"night1_ausedupload": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "AusEd Upload Night Shift 1"
+		},
+		"night2_ausedupload": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "Aused Upload Night Shift 2"
+		},
+		"night3_ausedupload": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "AusEd Upload Night Shift 3"
+		},
+
+		"day_kdtupload": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "KDT Upload Day Shift"
+		},
+		"night1_kdtupload": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "KDT Upload Night Shift 1"
+		},
+		"night3_kdtupload": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "KDT Upload Night Shift 3"
+		},
+		"day_PSGupload": {
+			"table_id": "1809112232",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/PSG2018.html",
+			"task": "PSG Upload Day Shift"
+		},
+		"night1_psgupload": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "PSG Upload Night Shift 1"
+		},
+		"night1_psgupload": {
+			"table_id": "20011120",
+			"url": "tasks/PSG2018.html",
+			"task": "PSG Upload Night Shift 1"
+		},
+
+
+
+		"7am_day_hungerappetite": {
+			"table_id": "1808310932",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7am Hunger and Appetite",
+			"form_module": "7am_day_hungerappetite_form"
+		},
+		"7am_day_hungerappetite_form": {
+			"table_id": "1808310932",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"8am_day_hungerappetite": {
+			"table_id": "1808310933",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "8am Hunger and Appetite",
+			"form_module": "8am_day_hungerappetite_form"
+		},
+		"8am_day_hungerappetite_form": {
+			"table_id": "1808310933",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"9am_day_hungerappetite": {
+			"table_id": "1808310934",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "9am Hunger and Appetite",
+			"form_module": "9am_day_hungerappetite_form"
+		},
+		"9am_day_hungerappetite_form": {
+			"table_id": "1808310934",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"10am_day_hungerappetite": {
+			"table_id": "1808310936",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "10am Hunger and Appetite",
+			"form_module": "10am_day_hungerappetite_form"
+		},
+		"10am_day_hungerappetite_form": {
+			"table_id": "1808310936",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"11am_day_hungerappetite": {
+			"table_id": "1808310937",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "11am Hunger and Appetite",
+			"form_module": "11am_day_hungerappetite_form"
+		},
+		"11am_day_hungerappetite_form": {
+			"table_id": "1808310937",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"12noon_day_hungerappetite": {
+			"table_id": "1808310938",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7pm Hunger and Appetite",
+			"form_module": "12noon_day_hungerappetite_form"
+		},
+		"12noon_day_hungerappetite_form": {
+			"table_id": "1808310938",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"1pm_day_hungerappetite": {
+			"table_id": "1808310939",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "1pm Hunger and Appetite",
+			"form_module": "1pm_day_hungerappetite_form"
+		},
+		"1pm_day_hungerappetite_form": {
+			"table_id": "1808310939",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"2pm_day_hungerappetite": {
+			"table_id": "1808310940",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "2pm Hunger and Appetite",
+			"form_module": "2pm_day_hungerappetite_form"
+		},
+		"2pm_day_hungerappetite_form": {
+			"table_id": "1808310940",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"3pm_day_hungerappetite": {
+			"table_id": "1808310941",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "3pm Hunger and Appetite",
+			"form_module": "3pm_day_hungerappetite_form"
+		},
+		"3pm_day_hungerappetite_form": {
+			"table_id": "1808310941",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"4pm_day_hungerappetite": {
+			"table_id": "1808310942",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "4pm Hunger and Appetite",
+			"form_module": "4pm_day_hungerappetite_form"
+		},
+		"4pm_day_hungerappetite_form": {
+			"table_id": "1808310942",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"5pm_day_hungerappetite": {
+			"table_id": "1808310943",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "5pm Hunger and Appetite",
+			"form_module": "5pm_day_hungerappetite_form"
+		},
+		"5pm_day_hungerappetite_form": {
+			"table_id": "1808310943",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"6pm_day_hungerappetite": {
+			"table_id": "1808310944",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "6pm Hunger and Appetite",
+			"form_module": "6pm_day_hungerappetite_form"
+		},
+		"6pm_day_hungerappetite_form": {
+			"table_id": "1808310944",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"7pm_day_hungerappetite": {
+			"table_id": "1808310945",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7pm Hunger and Appetite",
+			"form_module": "7pm_day_hungerappetite_form"
+		},
+		"7pm_day_hungerappetite_form": {
+			"table_id": "1808310945",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"8pm_day_hungerappetite": {
+			"table_id": "1808310946",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "8pm Hunger and Appetite",
+			"form_module": "8pm_day_hungerappetite_form"
+		},
+		"8pm_day_hungerappetite_form": {
+			"table_id": "1808310946",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"7pm_night1_hungerappetite": {
+			"table_id": "1808310947",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7pm Hunger and Appetite",
+			"form_module": "7pm_night1_hungerappetite_form"
+		},
+		"7pm_night1_hungerappetite_form": {
+			"table_id": "1808310947",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"8pm_night1_hungerappetite": {
+			"table_id": "1808310948",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "8pm Hunger and Appetite",
+			"form_module": "8pm_night1_hungerappetite_form"
+		},
+		"8pm_night1_hungerappetite_form": {
+			"table_id": "1808310948",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"9pm_night1_hungerappetite": {
+			"table_id": "1808310949",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "9pm Hunger and Appetite",
+			"form_module": "9pm_night1_hungerappetite_form"
+		},
+		"9pm_night1_hungerappetite_form": {
+			"table_id": "1808310949",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"10pm_night1_hungerappetite": {
+			"table_id": "1808310950",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "10pm Hunger and Appetite",
+			"form_module": "10pm_night1_hungerappetite_form"
+		},
+		"10pm_night1_hungerappetite_form": {
+			"table_id": "1808310950",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"11pm_night1_hungerappetite": {
+			"table_id": "1808310951",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "11pm Hunger and Appetite",
+			"form_module": "11pm_night1_hungerappetite_form"
+		},
+		"11pm_night1_hungerappetite_form": {
+			"table_id": "1808310951",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"12noon_night1_hungerappetite": {
+			"table_id": "1808310952",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "12pm Hunger and Appetite",
+			"form_module": "12noon_night1_hungerappetite_form"
+		},
+		"12noon_night1_hungerappetite_form": {
+			"table_id": "1808310952",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"1am_night1_hungerappetite": {
+			"table_id": "1808310953",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "1am Hunger and Appetite",
+			"form_module": "1am_night1_hungerappetite_form"
+		},
+		"1am_night1_hungerappetite_form": {
+			"table_id": "1808310953",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"2am_night1_hungerappetite": {
+			"table_id": "1808310954",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "2am Hunger and Appetite",
+			"form_module": "2am_night1_hungerappetite_form"
+		},
+		"2am_night1_hungerappetite_form": {
+			"table_id": "1808310954",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"3am_night1_hungerappetite": {
+			"table_id": "1808310955",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "3am Hunger and Appetite",
+			"form_module": "3am_night1_hungerappetite_form"
+		},
+		"3am_night1_hungerappetite_form": {
+			"table_id": "1808310955",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"4am_night1_hungerappetite": {
+			"table_id": "1808310956",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "4am Hunger and Appetite",
+			"form_module": "4am_night1_hungerappetite_form"
+		},
+		"4am_night1_hungerappetite_form": {
+			"table_id": "1808310956",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"5am_night1_hungerappetite": {
+			"table_id": "1808310957",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "5am Hunger and Appetite",
+			"form_module": "5am_night1_hungerappetite_form"
+		},
+		"5am_night1_hungerappetite_form": {
+			"table_id": "1808310957",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"6am_night1_hungerappetite": {
+			"table_id": "1808310958",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "6am Hunger and Appetite",
+			"form_module": "6am_night1_hungerappetite_form"
+		},
+		"6am_night1_hungerappetite_form": {
+			"table_id": "1808310958",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"7am_night1_hungerappetite": {
+			"table_id": "1808310959",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7am Hunger and Appetite",
+			"form_module": "7am_night1_day_hungerappetite_form"
+		},
+		"7am_night_day_hungerappetite_form": {
+			"table_id": "1808310959",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"8am_night1_hungerappetite": {
+			"table_id": "1808310960",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "8am Hunger and Appetite",
+			"form_module": "8am_night1_hungerappetite_form"
+		},
+		"8am_night1_hungerappetite_form": {
+			"table_id": "1808310960",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"7pm_night2_hungerappetite": {
+			"table_id": "1808310961",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7pm Hunger and Appetite",
+			"form_module": "7pm_night2_hungerappetite_form"
+		},
+		"7pm_night2_hungerappetite_form": {
+			"table_id": "1808310961",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"8pm_night2_hungerappetite": {
+			"table_id": "1808310962",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "8pm Hunger and Appetite",
+			"form_module": "8pm_night2_hungerappetite_form"
+		},
+		"8pm_night2_hungerappetite_form": {
+			"table_id": "1808310962",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"9pm_night2_hungerappetite": {
+			"table_id": "1808310963",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "9pm Hunger and Appetite",
+			"form_module": "9pm_night2_hungerappetite_form"
+		},
+		"9pm_night2_hungerappetite_form": {
+			"table_id": "1808310963",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"10pm_night2_hungerappetite": {
+			"table_id": "1808310964",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "10pm Hunger and Appetite",
+			"form_module": "10pm_night2_hungerappetite_form"
+		},
+		"10pm_night2_hungerappetite_form": {
+			"table_id": "1808310964",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"11pm_night2_hungerappetite": {
+			"table_id": "1808310965",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "11pm Hunger and Appetite",
+			"form_module": "11pm_night2_hungerappetite_form"
+		},
+		"11pm_night2_hungerappetite_form": {
+			"table_id": "1808310965",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"12noon_night2_hungerappetite": {
+			"table_id": "1808310966",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "12pm Hunger and Appetite",
+			"form_module": "12noon_night2_hungerappetite_form"
+		},
+		"12noon_night2_hungerappetite_form": {
+			"table_id": "1808310966",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"1am_night2_hungerappetite": {
+			"table_id": "1808310967",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "1am Hunger and Appetite",
+			"form_module": "1am_night2_hungerappetite_form"
+		},
+		"1am_night2_hungerappetite_form": {
+			"table_id": "1808310967",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"2am_night2_hungerappetite": {
+			"table_id": "1808310968",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "2am Hunger and Appetite",
+			"form_module": "2am_night2_hungerappetite_form"
+		},
+		"2am_night2_hungerappetite_form": {
+			"table_id": "1808310968",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"3am_night2_hungerappetite": {
+			"table_id": "1808310969",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "3am Hunger and Appetite",
+			"form_module": "3am_night2_hungerappetite_form"
+		},
+		"3am_night2_hungerappetite_form": {
+			"table_id": "1808310969",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"4am_night2_hungerappetite": {
+			"table_id": "1808310970",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "4am Hunger and Appetite",
+			"form_module": "4am_night2_hungerappetite_form"
+		},
+		"4am_night2_hungerappetite_form": {
+			"table_id": "1808310970",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"5am_night2_hungerappetite": {
+			"table_id": "1808310971",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "5am Hunger and Appetite",
+			"form_module": "5am_night2_hungerappetite_form"
+		},
+		"5am_night2_hungerappetite_form": {
+			"table_id": "1808310971",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"6am_night2_hungerappetite": {
+			"table_id": "1808310972",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "6am Hunger and Appetite",
+			"form_module": "6am_night2_hungerappetite_form"
+		},
+		"6am_night2_hungerappetite_form": {
+			"table_id": "1808310972",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"7am_night2_hungerappetite": {
+			"table_id": "1808310973",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7am Hunger and Appetite",
+			"form_module": "7am_night2_hungerappetite_form"
+		},
+		"7am_night2_hungerappetite_form": {
+			"table_id": "1808310973",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"8am_night2_hungerappetite": {
+			"table_id": "1808310974",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "8am Hunger and Appetite",
+			"form_module": "8am_night2_hungerappetite_form"
+		},
+		"8am_night2_hungerappetite_form": {
+			"table_id": "1808310974",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"7pm_night3_hungerappetite": {
+			"table_id": "1808310975",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7pm Hunger and Appetite",
+			"form_module": "7pm_night3_hungerappetite_form"
+		},
+		"7pm_night3_hungerappetite_form": {
+			"table_id": "1808310975",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"8pm_night3_hungerappetite": {
+			"table_id": "1808310976",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "8pm Hunger and Appetite",
+			"form_module": "8pm_night3_hungerappetite_form"
+		},
+		"8pm_night3_hungerappetite_form": {
+			"table_id": "1808310976",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"9pm_night3_hungerappetite": {
+			"table_id": "1808310977",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "9pm Hunger and Appetite",
+			"form_module": "9pm_night3_hungerappetite_form"
+		},
+		"9pm_night3_hungerappetite_form": {
+			"table_id": "1808310977",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"10pm_night3_hungerappetite": {
+			"table_id": "1808310978",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "10pm Hunger and Appetite",
+			"form_module": "10pm_night3_hungerappetite_form"
+		},
+		"10pm_night3_hungerappetite_form": {
+			"table_id": "1808310978",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"11pm_night3_hungerappetite": {
+			"table_id": "1808310979",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "11pm Hunger and Appetite",
+			"form_module": "11pm_night3_hungerappetite_form"
+		},
+		"11pm_night3_hungerappetite_form": {
+			"table_id": "1808310979",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"12noon_night3_hungerappetite": {
+			"table_id": "1808310980",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "12pm Hunger and Appetite",
+			"form_module": "12noon_night3_hungerappetite_form"
+		},
+		"12noon_night3_hungerappetite_form": {
+			"table_id": "1808310980",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"1am_night3_hungerappetite": {
+			"table_id": "1808310981",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "1am Hunger and Appetite",
+			"form_module": "1am_night3_hungerappetite_form"
+		},
+		"1am_night3_hungerappetite_form": {
+			"table_id": "1808310981",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"2am_night3_hungerappetite": {
+			"table_id": "1808310982",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "2am Hunger and Appetite",
+			"form_module": "2am_night3_hungerappetite_form"
+		},
+		"2am_night3_hungerappetite_form": {
+			"table_id": "1808310982",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"3am_night3_hungerappetite": {
+			"table_id": "1808310983",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "3am Hunger and Appetite",
+			"form_module": "3am_night3_hungerappetite_form"
+		},
+		"3am_night3_hungerappetite_form": {
+			"table_id": "1808310983",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"4am_night3_hungerappetite": {
+			"table_id": "1808310984",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "4am Hunger and Appetite",
+			"form_module": "4am_night3_hungerappetite_form"
+		},
+		"4am_night3_hungerappetite_form": {
+			"table_id": "1808310984",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"5am_night3_hungerappetite": {
+			"table_id": "1808310985",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "5am Hunger and Appetite",
+			"form_module": "5am_night3_hungerappetite_form"
+		},
+		"5am_night3_hungerappetite_form": {
+			"table_id": "1808310985",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"6am_night3_hungerappetite": {
+			"table_id": "1808310986",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "6am Hunger and Appetite",
+			"form_module": "6am_night3_hungerappetite_form"
+		},
+		"6am_night3_hungerappetite_form": {
+			"table_id": "1808310986",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"7am_night3_hungerappetite": {
+			"table_id": "1808310987",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "7am Hunger and Appetite",
+			"form_module": "7am_night3_hungerappetite_form"
+		},
+		"7am_night3_hungerappetite_form": {
+			"table_id": "1808310987",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+		"8am_night3_hungerappetite": {
+			"table_id": "1808310988",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
+			"task": "8am Hunger and Appetite",
+			"form_module": "8am_night3_hungerappetite_form"
+		},
+		"8am_night3_hungerappetite_form": {
+			"table_id": "1808310988",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite-form.html"
+		},
+
+"KSS":{},
+
+		"7am_day_kss": {
+			"table_id": "1809051407",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "7am Sleepiness ",
+			"form_module": "7am_day_kss_form"
+		},
+		"7am_day_kss_form": {
+			"table_id": "1809051407",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"8am_day_kss": {
+			"table_id": "1809051408",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "8am Sleepiness",
+			"form_module": "8am_day_kss_form"
+		},
+		"8am_day_kss_form": {
+			"table_id": "1809051408",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"9am_day_kss": {
+			"table_id": "1809051409",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "9am Sleepiness",
+			"form_module": "9am_day_kss_form"
+		},
+		"9am_day_kss_form": {
+			"table_id": "1809051409",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"10am_day_kss": {
+			"table_id": "1809051410",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "10am Sleepiness",
+			"form_module": "10am_day_kss_form"
+		},
+		"10am_day_kss_form": {
+			"table_id": "1809051410",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"11am_day_kss": {
+			"table_id": "1809051411",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "11am Sleepiness",
+			"form_module": "11am_day_kss_form"
+		},
+		"11am_day_kss_form": {
+			"table_id": "1809051411",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"12noon_day_kss": {
+			"table_id": "1809051412",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "12noon Sleepiness",
+			"form_module": "12noon_day_kss_form"
+		},
+		"12noon_day_kss_form": {
+			"table_id": "1809051412",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"1pm_day_kss": {
+			"table_id": "1809051413",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "1pm Sleepiness",
+			"form_module": "1pm_day_kss_form"
+		},
+		"1pm_day_kss_form": {
+			"table_id": "1809051413",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"2pm_day_kss": {
+			"table_id": "1809051414",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "2pm Sleepiness",
+			"form_module": "2pm_day_kss_form"
+		},
+		"2pm_day_kss_form": {
+			"table_id": "1809051414",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"day_prekdt_kss": {
+			"table_id": "1809051415",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "Sleepiness Pre KDT",
+			"form_module": "day_prekdt_kss_form"
+		},
+		"day_prekdtkss_form": {
+			"table_id": "1809051415",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"day_postkdt_kss": {
+			"table_id": "1809051416",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "Sleepiness Post KDT",
+			"form_module": "day_postkdt_kss_form"
+		},
+		"day_postkdt_kss_form": {
+			"table_id": "1809051416",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"3pm_day_kss": {
+			"table_id": "1809051417",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "3pm Sleepiness",
+			"form_module": "3pm_day_kss_form"
+		},
+		"3pm_day_kss_form": {
+			"table_id": "1809051417",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"4pm_day_kss": {
+			"table_id": "1809051418",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "4pm Sleepiness",
+			"form_module": "4pm_day_kss_form"
+		},
+		"4pm_day_kss_form": {
+			"table_id": "1809051418",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"5pm_day_kss": {
+			"table_id": "1809051419",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "5pm Sleepiness",
+			"form_module": "5pm_day_kss_form"
+		},
+		"5pm_day_kss_form": {
+			"table_id": "1809051419",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"6pm_day_kss": {
+			"table_id": "1809051420",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "6pm Sleepiness",
+			"form_module": "6pm_day_kss_form"
+		},
+		"6pm_day_kss_form": {
+			"table_id": "1809051420",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"7pm_day_kss": {
+			"table_id": "1809051421",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "7pm Sleepiness",
+			"form_module": "7pm_day_kss_form"
+		},
+		"7pm_day_kss_form": {
+			"table_id": "1809051421",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"8pm_day_kss": {
+			"table_id": "1809051422",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "8pm Sleepiness",
+			"form_module": "8pm_day_kss_form"
+		},
+		"8pm_day_kss_form": {
+			"table_id": "1809051422",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"9pm_night1_kss": {
+			"table_id": "1809051423",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "9pm Sleepiness",
+			"form_module": "9pm_night1_kss_form"
+		},
+		"9pm_night1_kss_form": {
+			"table_id": "1809051423",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"10pm_night1_kss": {
+			"table_id": "1809051424",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "10pm Sleepiness",
+			"form_module": "10pm_night1_kss_form"
+		},
+		"10pm_night1_kss_form": {
+			"table_id": "1809051424",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"11pm_night1_kss": {
+			"table_id": "1809051425",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "11pm Sleepiness",
+			"form_module": "11pm_night1_kss_form"
+		},
+		"11pm_night1_kss_form": {
+			"table_id": "1809051425",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"12midnight_night1_kss": {
+			"table_id": "1809051426",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "12midnight Sleepiness",
+			"form_module": "12midnight_night1_kss_form"
+		},
+		"12midnight_night1_kss_form": {
+			"table_id": "1809051426",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"1am_night1_kss": {
+			"table_id": "1809051427",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "1am Sleepiness",
+			"form_module": "1am_night1_kss_form"
+		},
+		"1am_night1_kss_form": {
+			"table_id": "1809051427",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"2am_night1_kss": {
+			"table_id": "1809051428",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "2am Sleepiness",
+			"form_module": "2am_night1_kss_form"
+		},
+		"2am_night1_kss_form": {
+			"table_id": "1809051428",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"night1_prekdt_kss": {
+			"table_id": "1809051429",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "Sleepiness Pre KDT",
+			"form_module": "night1_prekdt_kss_form"
+		},
+		"night1_prekdt_kss_form": {
+			"table_id": "1809051429",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"night1_postkdt_kss": {
+			"table_id": "1809051430",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "Sleepiness Post KDT",
+			"form_module": "night1_postkdt_kss_form"
+		},
+		"night1_postkdt_kss_form": {
+			"table_id": "1809051430",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"3am_night1_kss": {
+			"table_id": "1809051431",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "3am Sleepiness",
+			"form_module": "3am_night1_kss_form"
+		},
+		"3am_night1_kss_form": {
+			"table_id": "1809051431",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"4am_night1_kss": {
+			"table_id": "1809051432",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "4am Sleepiness",
+			"form_module": "4am_night1_kss_form"
+		},
+		"4am_night1_kss_form": {
+			"table_id": "1809051432",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"5am_night1_kss": {
+			"table_id": "1809051433",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "5am Sleepiness",
+			"form_module": "5am_night1_kss_form"
+		},
+		"5am_night1_kss_form": {
+			"table_id": "1809051433",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"6am_night1_kss": {
+			"table_id": "1809051434",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "6am Sleepiness",
+			"form_module": "6am_night1_kss_form"
+		},
+		"6am_night1_kss_form": {
+			"table_id": "1809051434",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"7am_night1_kss": {
+			"table_id": "1809051435",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "7am Sleepiness",
+			"form_module": "7am_night1_kss_form"
+		},
+		"7am_night1_kss_form": {
+			"table_id": "1809051435",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"8am_night1_kss": {
+			"table_id": "1809051436",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "8am Sleepiness",
+			"form_module": "8am_night1_kss_form"
+		},
+		"8am_night1_kss_form": {
+			"table_id": "1809051436",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"7pm_night2_kss": {
+			"table_id": "1809051437",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "7pm Sleepiness",
+			"form_module": "7pm_night2_kss_form"
+		},
+		"7pm_night2_kss_form": {
+			"table_id": "1809051437",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"8pm_night2_kss": {
+			"table_id": "1809051438",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "8pm Sleepiness",
+			"form_module": "8pm_night2_kss_form"
+		},
+		"8pm_night2_kss_form": {
+			"table_id": "1809051438",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"9pm_night2_kss": {
+			"table_id": "1809051439",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "9pm Sleepiness",
+			"form_module": "9pm_night2_kss_form"
+		},
+		"9pm_night2_kss_form": {
+			"table_id": "1809051439",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"10pm_night2_kss": {
+			"table_id": "1809051440",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "10pm Sleepiness",
+			"form_module": "10pm_night2_kss_form"
+		},
+		"10pm_night2_kss_form": {
+			"table_id": "1809051440",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"11pm_night2_kss": {
+			"table_id": "1809051441",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "11pm Sleepiness",
+			"form_module": "11pm_night2_kss_form"
+		},
+		"11pm_night2_kss_form": {
+			"table_id": "1809051441",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"12midnight_night2_kss": {
+			"table_id": "1809051441",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "12midnight Sleepiness",
+			"form_module": "12midnight_night2_kss_form"
+		},
+		"12midnight_night2_kss_form": {
+			"table_id": "1809051441",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"1am_night2_kss": {
+			"table_id": "1809051442",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "1am Sleepiness",
+			"form_module": "1am_night2_kss_form"
+		},
+		"1am_night2_kss_form": {
+			"table_id": "1809051442",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"2am_night2_kss": {
+			"table_id": "1809051443",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "2am Sleepiness",
+			"form_module": "2am_night2_kss_form"
+		},
+		"2am_night2_kss_form": {
+			"table_id": "1809051443",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"night2_prekdt_kss": {
+			"table_id": "1809051444",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "Sleepiness Pre KDT",
+			"form_module": "night2_prekdt_kss_form"
+		},
+		"night2_prekdt_kss_form": {
+			"table_id": "1809051444",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"night2_postkdt_kss": {
+			"table_id": "1809051445",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "Sleepiness Post KDT",
+			"form_module": "night2_postkdt_kss_form"
+		},
+		"night2_postkdt_kss_form": {
+			"table_id": "1809051445",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"3am_night2_kss": {
+			"table_id": "1809051446",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "3am Sleepiness",
+			"form_module": "3am_night2_kss_form"
+		},
+		"3am_night2_kss_form": {
+			"table_id": "1809051446",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"4am_night2_kss": {
+			"table_id": "1809051447",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "4am Sleepiness",
+			"form_module": "4am_night2_kss_form"
+		},
+		"4am_night2_kss_form": {
+			"table_id": "1809051447",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"5am_night2_kss": {
+			"table_id": "1809051448",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "5am Sleepiness",
+			"form_module": "5am_night2_kss_form"
+		},
+		"5am_night2_kss_form": {
+			"table_id": "1809051448",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"6am_night2_kss": {
+			"table_id": "1809051449",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "6am Sleepiness",
+			"form_module": "6am_night2_kss_form"
+		},
+		"6am_night2_kss_form": {
+			"table_id": "1809051449",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"7am_night2_kss": {
+			"table_id": "1809051450",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "7am Sleepiness",
+			"form_module": "7am_night2_kss_form"
+		},
+		"7am_night2_kss_form": {
+			"table_id": "1809051450",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"8am_night2_kss": {
+			"table_id": "1809051451",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "8am Sleepiness",
+			"form_module": "8am_night2_kss_form"
+		},
+		"8am_night2_kss_form": {
+			"table_id": "1809051451",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"7pm_night3_kss": {
+			"table_id": "1809051452",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "7pm Sleepiness",
+			"form_module": "7pm_night3_kss_form"
+		},
+		"7pm_night3_kss_form": {
+			"table_id": "1809051452",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"8pm_night3_kss": {
+			"table_id": "1809051453",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "8pm Sleepiness",
+			"form_module": "8pm_night3_kss_form"
+		},
+		"8pm_night3_kss_form": {
+			"table_id": "1809051453",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"9pm_night3_kss": {
+			"table_id": "1809051454",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "9pm Sleepiness",
+			"form_module": "9pm_night3_kss_form"
+		},
+		"9pm_night3_kss_form": {
+			"table_id": "1809051454",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"10pm_night3_kss": {
+			"table_id": "1809051455",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "10pm Sleepiness",
+			"form_module": "10pm_night3_kss_form"
+		},
+		"10pm_night3_kss_form": {
+			"table_id": "1809051455",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"11pm_night3_kss": {
+			"table_id": "1809051456",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "11pm Sleepiness",
+			"form_module": "11pm_night3_kss_form"
+		},
+		"11pm_night3_kss_form": {
+			"table_id": "1809051456",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"12midnight_night3_kss": {
+			"table_id": "1809051457",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "12midnight Sleepiness",
+			"form_module": "12midnight_night3_kss_form"
+		},
+		"12midnight_night3_kss_form": {
+			"table_id": "1809051457",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"1am_night3_kss": {
+			"table_id": "1809051458",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "1am Sleepiness",
+			"form_module": "1am_night3_kss_form"
+		},
+		"1am_night3_kss_form": {
+			"table_id": "1809051458",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"2am_night3_kss": {
+			"table_id": "1809051459",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "2am Sleepiness",
+			"form_module": "2am_night3_kss_form"
+		},
+		"2am_night3_kss_form": {
+			"table_id": "1809051459",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"night3_prekdt_kss": {
+			"table_id": "1809051460",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "Sleepiness Pre KDT",
+			"form_module": "night3_prekdt_kss_form"
+		},
+		"night3_prekdt_kss_form": {
+			"table_id": "1809051460",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"night3_postkdt_kss": {
+			"table_id": "1809051461",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "Sleepiness Post KDT",
+			"form_module": "night3_postkdt_kss_form"
+		},
+		"night3_postkdt_kss_form": {
+			"table_id": "1809051461",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"3am_night3_kss": {
+			"table_id": "1809051462",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "3am Sleepiness",
+			"form_module": "3am_night3_kss_form"
+		},
+		"3am_night3_kss_form": {
+			"table_id": "1809051462",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"4am_night3_kss": {
+			"table_id": "1809051463",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "4am Sleepiness",
+			"form_module": "4am_night3_kss_form"
+		},
+		"4am_night3_kss_form": {
+			"table_id": "1809051463",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"5am_night3_kss": {
+			"table_id": "1809051464",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "5am Sleepiness",
+			"form_module": "5am_night3_kss_form"
+		},
+		"5am_night3_kss_form": {
+			"table_id": "1809051464",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"6am_night3_kss": {
+			"table_id": "1809051465",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "6am Sleepiness",
+			"form_module": "6am_night3_kss_form"
+		},
+		"6am_night3_kss_form": {
+			"table_id": "1809051465",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"7am_night3_kss": {
+			"table_id": "1809051466",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "7am Sleepiness",
+			"form_module": "7am_night3_kss_form"
+		},
+		"7am_night3_kss_form": {
+			"table_id": "1809051466",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+		"8am_night3_kss": {
+			"table_id": "1809051467",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss.html",
+			"task": "8am Sleepiness",
+			"form_module": "8am_night3_kss_form"
+		},
+		"8am_night3_kss_form": {
+			"table_id": "1809051467",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/kss-form.html"
+		},
+
+
+										"CRT_Upload":{},
+
+
+		"9am_day_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "9am Choice Reaction Time",
+			"form_module": "9am_day_crt_form"
+		},
+		"9am_day_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"11am_day_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "11am Choice Reaction Time",
+			"form_module": "11am_day_crt_form"
+		},
+		"11am_day_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"1pm_day_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "1pm Choice Reaction Time",
+			"form_module": "1pm_day_crt_form"
+		},
+		"1pm_day_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"5pm_day_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "5pm Choice Reaction Time",
+			"form_module": "5pm_day_crt_form"
+		},
+		"5pm_day_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"7pm_day_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "7pm Choice Reaction Time",
+			"form_module": "7pm_day_crt_form"
+		},
+		"7pm_day_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"9pm_night1_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "9pm Choice Reaction Time",
+			"form_module": "9pm_night1_crt_form"
+		},
+		"9pm_night1_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"11pm_night1_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "11pm Choice Reaction Time",
+			"form_module": "11pm_night1_crt_form"
+		},
+		"11pm_night1_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"1am_night1_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "1am Choice Reaction Time",
+			"form_module": "1am_night1_crt_form"
+		},
+		"1am_night1_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"5am_night1_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "5am Choice Reaction Time",
+			"form_module": "5am_night1_crt_form"
+		},
+		"5am_night1_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"7am_night1_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "7am Choice Reaction Time",
+			"form_module": "7am_night1_crt_form"
+		},
+		"7am_night1_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"9pm_night2_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "9pm Choice Reaction Time",
+			"form_module": "9pm_night2_crt_form"
+		},
+		"9pm_night2_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"11pm_night2_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "11pm Choice Reaction Time",
+			"form_module": "11pm_night2_crt_form"
+		},
+		"11pm_night2_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"1am_night2_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "1am Choice Reaction Time",
+			"form_module": "1am_night2_crt_form"
+		},
+		"1am_night2_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"5am_night2_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "5am Choice Reaction Time",
+			"form_module": "5am_night2_crt_form"
+		},
+		"5am_night2_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"7am_night2_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "7am Choice Reaction Time",
+			"form_module": "7am_night2_crt_form"
+		},
+		"7am_night2_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"9pm_night3_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "9pm Choice Reaction Time",
+			"form_module": "9pm_night3_crt_form"
+		},
+		"9pm_night3_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"11pm_night3_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "11pm Choice Reaction Time",
+			"form_module": "11pm_night3_crt_form"
+		},
+		"11pm_night3_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"1am_night3_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "1am Choice Reaction Time",
+			"form_module": "1am_night3_crt_form"
+		},
+		"1am_night3_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"5am_night3_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "5am Choice Reaction Time",
+			"form_module": "5am_night3_crt_form"
+		},
+		"5am_night3_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+		"7am_night3_crt": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.html",
+			"task": "7am Choice Reaction Time",
+			"form_module": "7am_night3_crt_form"
+		},
+		"7am_night3_crt_form": {
+			"table_id": "20011120",
+			"url": "tasks/ethnicity.form.html"
+		},
+
+													"PVT":{},
+
+
+		"8am_day_pvt": {
+			"table_id": "1809071607",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "8am PVT Upload"
+		},
+		"10am_day_pvt": {
+			"table_id": "1809071608",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "10am PVT Upload"
+		},
+		"12noon_day_pvt": {
+			"table_id": "1809071609",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "12noon PVT Upload"
+		},
+		"2pm_day_pvt": {
+			"table_id": "1809071610",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "2pm PVT Upload"
+		},
+		"4pm_day_pvt": {
+			"table_id": "1809071611",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "4pm PVT Upload"
+		},
+		"6pm_day_pvt": {
+			"table_id": "1809071612",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "6pm PVT Upload"
+		},
+		"8pm_day_pvt": {
+			"table_id": "1809071613",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "8pm PVT Upload"
+		},
+		"8pm_night1_pvt": {
+			"table_id": "1809071614",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "8pm PVT Upload"
+		},
+		"10pm_night1_pvt": {
+			"table_id": "1809071615",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "10pm PVT Upload"
+		},
+		"12midnight_night1_pvt": {
+			"table_id": "1809071616",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "12midnight PVT Upload"
+		},
+		"2am_night1_pvt": {
+			"table_id": "1809071617",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "2am PVT Upload"
+		},
+		"4am_night1_pvt": {
+			"table_id": "1809071618",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "4am PVT Upload"
+		},
+		"6am_night1_pvt": {
+			"table_id": "1809071619",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "6am PVT Upload"
+		},
+		"8am_night1_pvt": {
+			"table_id": "1809071620",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "8am PVT Upload"
+		},
+		"8pm_night2_pvt": {
+			"table_id": "1809071621",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "8pm PVT Upload"
+		},
+		"10pm_night2_pvt": {
+			"table_id": "1809071622",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "10pm PVT Upload"
+		},
+		"12midnight_night2_pvt": {
+			"table_id": "1809071623",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "12midnight PVT Upload"
+		},
+		"2am_night2_pvt": {
+			"table_id": "1809071623",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "2am PVT Upload"
+		},
+		"4am_night2_pvt": {
+			"table_id": "1809071624",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "4am PVT Upload"
+		},
+		"6am_night2_pvt": {
+			"table_id": "1809071625",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "6am PVT Upload"
+		},
+		"8am_night2_pvt": {
+			"table_id": "1809071626",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "8am PVT Upload"
+		},
+		"8pm_night3_pvt": {
+			"table_id": "1809071627",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "8pm PVT Upload"
+		},
+		"10pm_night3_pvt": {
+			"table_id": "1809071628",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "10pm PVT Upload"
+		},
+		"12midnight_night3_pvt": {
+			"table_id": "1809071629",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "12midnight PVT Upload"
+		},
+		"2am_night3_pvt": {
+			"table_id": "1809071630",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "2am PVT Upload"
+		},
+		"4am_night3_pvt": {
+			"table_id": "1809071631",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "4am PVT Upload"
+		},
+		"6am_night3_pvt": {
+			"table_id": "1809071632",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "6am PVT Upload"
+		},
+		"8am_night3_pvt": {
+			"table_id": "1809071633",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"task": "8am PVT Upload"
+		},
+				"Glutri":{},
+
+	"7am_day_glucosetriglycerides": {
+	"table_id": "1809071634",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "7am Glucose and Triglycerides"
+},
+		"830am_day_glucosetriglycerides": {
+		"table_id": "1809071635",
+		"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+		"task": "8:30am Glucose and Triglycerides"
+},
+		"10am_day_glucosetriglycerides": {
+		"table_id": "1809071636",
+		"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+		"task": "10am Glucose and Triglycerides"
+},
+"11am_day_glucosetriglycerides": {
+	"table_id": "1809071637",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "11am Glucose and Triglycerides"
+},
+"1pm_day_glucosetriglycerides": {
+	"table_id": "1809071638",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "1pm Glucose and Triglycerides"
+},
+"230pm_day_glucosetriglycerides": {
+	"table_id": "1809071639",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "230pm Glucose and Triglycerides"
+},
+
+"4pm_day_glucosetriglycerides": {
+	"table_id": "1809071640",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "4pm Glucose and Triglycerides"
+},
+"5pm_day_glucosetriglycerides": {
+	"table_id": "1809071641",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "5pm Glucose and Triglycerides"
+},
+"7pm_day_glucosetriglycerides": {
+	"table_id": "1809071642",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "7pm Glucose and Triglycerides"
+},
+"830pm_day_glucosetriglycerides": {
+	"table_id": "1809071643",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "830pm Glucose and Triglycerides"
+},
+"10pm_day_glucosetriglycerides": {
+	"table_id": "1809071644",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "10pm Glucose and Triglycerides"
+},
+"11pm_day_glucosetriglycerides": {
+	"table_id": "1809071645",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "11pm Glucose and Triglycerides"
+},
+"7pm_night3_glucosetriglycerides": {
+	"table_id": "1809071646",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "7pm Glucose and Triglycerides"
+},
+"830pm_night3_glucosetriglycerides": {
+	"table_id": "1809071647",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "830pm Glucose and Triglycerides"
+},
+"10pm_night3_glucosetriglycerides": {
+	"table_id": "1809071648",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "10pm Glucose and Triglycerides"
+},
+"11pm_night3_glucosetriglycerides": {
+	"table_id": "1809071649",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "11pm Glucose and Triglycerides"
+},
+"1am_night3_glucosetriglycerides": {
+	"table_id": "18090716450",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "1am Glucose and Triglycerides"
+},
+"230am_night3_glucosetriglycerides": {
+	"table_id": "18090716451",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "230am Glucose and Triglycerides"
+},
+"4am_night3_glucosetriglycerides": {
+	"table_id": "18090716451",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "4am Glucose and Triglycerides"
+},
+"5am_night3_glucosetriglycerides": {
+	"table_id": "18090716452",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "5am Glucose and Triglycerides"
+},
+"7am_night3_glucosetriglycerides": {
+	"table_id": "18090716453",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "7am Glucose and Triglycerides"
+},
+"830am_night3_glucosetriglycerides": {
+	"table_id": "18090716454",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "8am Glucose and Triglycerides"
+},
+"10am_night3_glucosetriglycerides": {
+	"table_id": "18090716455",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "10am Glucose and Triglycerides"
+},
+"11am_night3_glucosetriglycerides": {
+	"table_id": "18090716456",
+	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
+	"task": "11am Glucose and Triglycerides"
+},
+
+"quest_list":{
+"list":{
+"Screening":[
+					{"table_id":"1809051150","task_name":"Multivariate Apnea Prediction Index"}
 				],
-				"Adverse Events & Concom":[
-					{"table_id":"20011207","task_name":"Concom_meds"}
-				],
-				"Screening":[
-					{"table_id":"20011210","task_name":"ESS"},
-                    {"table_id":"20011211","task_name":"SC_Concom_meds"}
-				],
-				"Baseline Evening":[
-					{"table_id":"20011217","task_name":"BL_ESS"},
-                    {"table_id":"20011218","task_name":"BL_ISI"},
-                    {"table_id":"20011219","task_name":"BL_PSQI"},
-					{"table_id":"20011220","task_name":"BL_DASS"},
-                    {"table_id":"20011221","task_name":"BL_HADS"},
-                    {"table_id":"20011222","task_name":"BL_homecq"},
-                    {"table_id":"20011225","task_name":"BL_Evening_KSS"}
-				],
-				"Baseline Finger Tapping Task":[
+
+"Day Shift":[
+	{"table_id":"1808310932","task_name":"7am Hunger and Appetite"},
+	{"table_id":"1809051407","task_name":"7am Sleepiness"},
+	{"table_id":"1808310933","task_name":"8am Hunger and Appetite"},
+	{"table_id":"1809051408","task_name":"8am Sleepiness"},
+	{"table_id":"1808310934","task_name":"9am Hunger and Appetite"},
+	{"table_id":"1809051409","task_name":"9am Sleepiness "},
+	{"table_id":"1808310936","task_name":"10am Hunger and Appetite"},
+	{"table_id":"1809051410","task_name":"10am Sleepiness"},
+	{"table_id":"1808310937","task_name":"11am Hunger and Appetite"},
+	{"table_id":"1809051411","task_name":"11am Sleepiness"},
+	{"table_id":"1808310938","task_name":"12pm Hunger and Appetite"},
+	{"table_id":"1809051412","task_name":"12pm Sleepiness"},
+	{"table_id":"1808310939","task_name":"1pm Hunger and Appetite"},
+	{"table_id":"1809051413","task_name":"1pm Sleepiness"},
+	{"table_id":"1808310940","task_name":"2pm Hunger and Appetite"},
+	{"table_id":"1809051414","task_name":"2pm Sleepiness"},
+	{"table_id":"1809051415","task_name":"2:15 Sleepiness Pre KDT"},
+	{"table_id":"1809051416","task_name":"2:25pm Sleepiness Post KDT"},
+	{"table_id":"1808310941","task_name":"3pm Hunger and Appetite"},
+	{"table_id":"1809051417","task_name":"3pm Sleepiness"}
+],
+"Screening":[
+	{"table_id":"20011210","task_name":"ESS"},
+	{"table_id":"20011211","task_name":"SC_Concom_meds"}
+],
+"Baseline Evening":[
+{"table_id":"20011217","task_name":"BL_ESS"},
+          {"table_id":"20011218","task_name":"BL_ISI"},
+          {"table_id":"20011219","task_name":"BL_PSQI"},
+{"table_id":"20011220","task_name":"BL_DASS"},
+          {"table_id":"20011221","task_name":"BL_HADS"},
+          {"table_id":"20011222","task_name":"BL_homecq"},
+          {"table_id":"20011225","task_name":"BL_Evening_KSS"}
+],
+"Baseline Finger Tapping Task":[
 					{"table_id":"20011234","task_name":"BL_Fingertapping_evening"}
-				],
-				"Baseline Morning":[
+],
+"Baseline Morning":[
 					{"table_id":"20011235","task_name":"BL_MORNING_KSS"},
-                    {"table_id":"20011236","task_name":"BL_Fingertapping_Morning"}
-				],
-				"Follow up Evening":[
-					{"table_id":"20011241","task_name":"FUP_ESS"},
-                    {"table_id":"20011242","task_name":"FUP_ISI"},
-                    {"table_id":"20011243","task_name":"FUP_PSQI"},
+					{"table_id":"20011236","task_name":"BL_Fingertapping_Morning"}
+],
+"Follow up Evening":[
+	{"table_id":"20011241","task_name":"FUP_ESS"},
+          {"table_id":"20011242","task_name":"FUP_ISI"},
+          {"table_id":"20011243","task_name":"FUP_PSQI"},
 					{"table_id":"20011244","task_name":"FUP_DASS"},
-                    {"table_id":"20011245","task_name":"FUP_HADS"},
-                    {"table_id":"20011246","task_name":"FUP_homecq"},
-                    {"table_id":"20011249","task_name":"FUP_KSS"}
-				],
-				"Follow up Evening Finger Tapping task":[
-					{"table_id":"20011258","task_name":"FU_Fingertapping_evening"}
-				],
-				"Follow Up Morning":[
-					{"table_id":"20011259","task_name":"FU_MORNING_KSS"},
-                    {"table_id":"20011260","task_name":"FU_Fingertapping_Morning"}
-				]
+          {"table_id":"20011245","task_name":"FUP_HADS"},
+          {"table_id":"20011246","task_name":"FUP_homecq"},
+          {"table_id":"20011249","task_name":"FUP_KSS"}
+],
+"Follow up Evening Finger Tapping task":[
+{"table_id":"20011258","task_name":"FU_Fingertapping_evening"}
+],
+"Follow Up Morning":[
+{"table_id":"20011259","task_name":"FU_MORNING_KSS"},
+{"table_id":"20011260","task_name":"FU_Fingertapping_Morning"}
+]
+				}
 			}
-		}
+
 	}
 }
