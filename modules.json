@@ -8,10 +8,9 @@
 		"child": {
 			"url": "https://shiftwork.rt.org.au/modules/panels/child.html"
 		},
-		"quest": {
-			"url": "https://shiftwork.rt.org.au/modules/panels/quest.html"
+		"quest-panel": {
+			"url": "https://shiftwork.rt.org.au/modules/online-questionnaire/quest.html"
 		},
-
 		"participant-data": {
 			"table_id": "20007819",
 			"url": "https://shiftwork.rt.org.au/modules/participant-and-others/participant-data.html",

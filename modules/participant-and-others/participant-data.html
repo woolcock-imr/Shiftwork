@@ -36,6 +36,19 @@
     						$vm.load_module_v2(m.prefix+'participant-login-setup',$vm.root_layout_content_slot,{record:records[I]});
                         });
                         break;
+                    case '_Quest':
+                        records[I].vm_custom[field]=true;
+                        td.html("<u style='cursor:pointer'>Online Questionnaire</u>");
+                        td.find('u').on('click',function(){
+    						var d="";if($vm.server=='development') d="&database=development";
+    						var p="?username="+records[I].S2+"&password="+records[I].S3+d;
+    						var q_url="https://shiftwork-online-questionnaire.rt.org.au/"+p;
+                            if(window.location.hostname=='127.0.0.1' || window.location.hostname=='localhost'){
+    							q_url=q_url.replace("https://shiftwork-online-questionnaire.rt.org.au/","http://127.0.0.1:8000/woolcock-imr/shiftwork-online-questionnaire/")
+    						};
+    						window.open(q_url);
+                        });
+                        break;
                     case '_Login_ID':
                         records[I].vm_readonly[field]=true;
                         td.html(records[I].S2);
