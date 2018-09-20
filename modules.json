@@ -1644,151 +1644,165 @@
 
 		"8am_day_pvt": {
 			"table_id": "1809071607",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
+			"form_module": "8am_day_pvt_form",
 			"task": "8am PVT Upload"
 		},
+		"8am_day_pvt_form": {
+			"table_id": "1809071607",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-form.html"
+		},
+
+
+
 		"10am_day_pvt": {
 			"table_id": "1809071608",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "10am PVT Upload"
 		},
 		"12noon_day_pvt": {
 			"table_id": "1809071609",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "12noon PVT Upload"
 		},
 		"2pm_day_pvt": {
 			"table_id": "1809071610",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "2pm PVT Upload"
 		},
 		"4pm_day_pvt": {
 			"table_id": "1809071611",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "4pm PVT Upload"
 		},
 		"6pm_day_pvt": {
 			"table_id": "1809071612",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "6pm PVT Upload"
 		},
 		"8pm_day_pvt": {
 			"table_id": "1809071613",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "8pm PVT Upload"
 		},
 		"8pm_night1_pvt": {
 			"table_id": "1809071614",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "8pm PVT Upload"
 		},
 		"10pm_night1_pvt": {
 			"table_id": "1809071615",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "10pm PVT Upload"
 		},
 		"12midnight_night1_pvt": {
 			"table_id": "1809071616",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "12midnight PVT Upload"
 		},
 		"2am_night1_pvt": {
 			"table_id": "1809071617",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "2am PVT Upload"
 		},
 		"4am_night1_pvt": {
 			"table_id": "1809071618",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "4am PVT Upload"
 		},
 		"6am_night1_pvt": {
 			"table_id": "1809071619",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "6am PVT Upload"
 		},
 		"8am_night1_pvt": {
 			"table_id": "1809071620",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "8am PVT Upload"
 		},
 		"8pm_night2_pvt": {
 			"table_id": "1809071621",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "8pm PVT Upload"
 		},
 		"10pm_night2_pvt": {
 			"table_id": "1809071622",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "10pm PVT Upload"
 		},
 		"12midnight_night2_pvt": {
 			"table_id": "1809071623",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "12midnight PVT Upload"
 		},
 		"2am_night2_pvt": {
 			"table_id": "1809071623",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "2am PVT Upload"
 		},
 		"4am_night2_pvt": {
 			"table_id": "1809071624",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "4am PVT Upload"
 		},
 		"6am_night2_pvt": {
 			"table_id": "1809071625",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "6am PVT Upload"
 		},
 		"8am_night2_pvt": {
 			"table_id": "1809071626",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "8am PVT Upload"
 		},
 		"8pm_night3_pvt": {
 			"table_id": "1809071627",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "8pm PVT Upload"
 		},
 		"10pm_night3_pvt": {
 			"table_id": "1809071628",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "10pm PVT Upload"
 		},
 		"12midnight_night3_pvt": {
 			"table_id": "1809071629",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "12midnight PVT Upload"
 		},
 		"2am_night3_pvt": {
 			"table_id": "1809071630",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "2am PVT Upload"
 		},
 		"4am_night3_pvt": {
 			"table_id": "1809071631",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "4am PVT Upload"
 		},
 		"6am_night3_pvt": {
 			"table_id": "1809071632",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "6am PVT Upload"
 		},
 		"8am_night3_pvt": {
 			"table_id": "1809071633",
-			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pvt-data.html",
 			"task": "8am PVT Upload"
 		},
 				"Glutri":{},
 
-	"7am_day_glucosetriglycerides": {
+	"Screening_Glucose_Triglycerides": {
 	"table_id": "1809071634",
 	"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
-	"task": "7am Glucose and Triglycerides"
-},
+	"task": "Screening Glucose and Triglycerides",
+	"form_module": "Screening_Glucose_Triglycerides_form"
+		},
+		"Screening_Glucose_Triglycerides_form": {
+		"table_id": "1809071634",
+		"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri-form.html"
+
+		},
 		"830am_day_glucosetriglycerides": {
 		"table_id": "1809071635",
 		"url": "https://shiftwork.rt.org.au/modules/tasks/gluctri.html",
