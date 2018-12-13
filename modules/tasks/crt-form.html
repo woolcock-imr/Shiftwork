@@ -31,12 +31,12 @@
 				</div>
 				<!---------------------------------------------------->
 
-				<div class='row row__ID'>
-		<div class="col">
-			<span>Premature Responses</span>
-			<input type=text class=form-control name=Premature_Responses>
-		</div>
-	</div>
+<div class='row row__ID'>
+<div class="col">
+<span>Premature Responses</span>
+<input type=text class=form-control name=Premature_Responses>
+</div>
+</div>
 
 	<div class='row row__ID'>
 <div class="col">
@@ -100,6 +100,7 @@
 <input type=text class=form-control name=Wrong_Count>
 </div>
 </div>
+
 <div class='row row__ID'>
 <div class="col">
 <span>Wrong Mean</span>
@@ -178,6 +179,22 @@
 					file_process(file,function(items){
 						$("#F__ID input[name='Premature_Responses']").val(items[1]);
 						$("#F__ID input[name='Anticipated_Responses']").val(items[2]);
+						$("#F__ID input[name='Correct_Count']").val(items[3]);
+						$("#F__ID input[name='Correct_Mean']").val(items[4]);
+						$("#F__ID input[name='Correct_Median']").val(items[5]);
+						$("#F__ID input[name='Correct_Variance']").val(items[6]);
+						$("#F__ID input[name='Correct_StdDev']").val(items[7]);
+						$("#F__ID input[name='Correct_Skewness']").val(items[8]);
+						$("#F__ID input[name='Correct_Kurtosis']").val(items[9]);
+						$("#F__ID input[name='Wrong_Count']").val(items[10]);
+						$("#F__ID input[name='Wrong_Mean']").val(items[11]);
+						$("#F__ID input[name='Wrong_Median']").val(items[12]);
+						$("#F__ID input[name='Wrong_Variance']").val(items[13]);
+						$("#F__ID input[name='Wrong_StdDev']").val(items[14]);
+						$("#F__ID input[name='Wrong_Skewness']").val(items[15]);
+						$("#F__ID input[name='Wrong_Kurtosis']").val(items[16]);
+						$("#F__ID input[name='Start_time']").val(items[18]);
+
 					});
     			});
 			}
