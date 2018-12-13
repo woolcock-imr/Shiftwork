@@ -1,0 +1,128 @@
+<div id=D__ID>
+    <section>
+        VmInclude:__COMPONENT__/module/grid.v1.html
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/module/grid.v1.js
+            VmInclude:__CURRENT_PATH__/task-data.js
+            //-------------------------------------
+            var fields="Premature_Responses,Anticipated_Responses,Correct_Count,Correct_Mean,Correct_Median,Correct_Variance,Correct_StdDev,Correct_Skewness,Correct_Kurtosis,Wrong_Count,Wrong_Mean,Wrong_Median,Wrong_Variance,Wrong_StdDev,Wrong_Skewness,Wrong_Kurtosis,Start_time";
+            m.fields="_Form,Status|S3,Notes|NT,Participant_ID|Participant_uid,Participant,"+fields+",Submit Date|DateTime,Submitted by|Author,_Delete";
+            m.form_fields="Participant_uid,Participant,"+fields;
+            //-------------------------------------
+            $('#D__ID').on('load',function(){  _set_req(); _request_data(); })
+            $('#D__ID').on('back',function(){  _set_req(); _request_data(); })
+            _cell_render=function(records,I,field,td,set_value,source){
+
+                switch(field){
+                    case 'Document':
+                        records[I].vm_custom[field]=true;
+                        if(records[I][field]===undefined) records[I][field]="";
+                        td.data('filename_field',field);
+                        var html="<u style='cursor:pointer'>"+records[I][field]+"</u>";
+                        html+="<span class=file_buttons><a title='Remove the file' class=remove_file>X<a> <a title='Choose a file' class=choose_file>&#9783;<a></span>";
+                        html+="<form><input type=file style='display:none'></input></form>";
+                        td.html(html);
+                        if(records[I][field]==="" || records[I][field]===null || records[I][field]===undefined) td.find('a.remove_file').css('visibility','hidden');
+                        td.find('u').on('click',function(){
+                            var f_name=$(this).html();
+                            var rid=records[I].ID;
+                            if(rid!==undefined){
+                                $vm.open_link({rid:rid,filename:f_name});
+                            }
+                            else alert("No file was found on server.")
+                        });
+                        td.find('a.choose_file').on('click',function(){
+                            if(td.find('form')[0]!==undefined) td.find('form')[0].reset();
+                            td.find('input[type=file]').trigger('click');
+                        })
+                        td.find('a.remove_file').on('click',function(){
+                            td.find('a.remove_file').css('visibility','hidden');
+                            change_file_name("");
+                        })
+                        td.find('input[type=file]').on('change',function(evt){
+                            td.find('a.remove_file').css('visibility','');
+                            var file = this.files[0];
+                            change_file_name(file.name);
+                            read_file(file);
+                        })
+                        var change_file_name=function(name){
+                            set_value(name,records,I,field);
+                            if(source=='grid'){
+                                td.parent().find("td[data-id='"+field+"']").find('u').html(name);
+                            }
+                            else{
+                                td.parent().parent().find("td[data-id='"+field+"']").find('u').html(name);
+                            }
+                        }
+                        var read_file=function(file){
+                            var reader = new FileReader();
+                            reader.onload = (function(e) {
+                                var contents = e.target.result;
+                                var lines=contents.replace(/"/g,'').replace(/\r/,'\n').replace(/\n\n/,'\n').split('\n');
+                                for(i=0;i<lines.length;i++){
+                                  var row=lines[i].split(/=/);
+                                   switch(row[0].trim().replace(/ /g,'')) {
+
+                                        case 'Premature_Responses':records[I]['Premature_Responses']=row[1];td.parent().find("td[data-id='Premature_Responses']").html(row[1]);break;
+                                        case 'Anticipated_Responses':records[I]['Anticipated_Responses']=row[1];td.parent().find("td[data-id='Anticipated_Responses']").html(row[1]);break;
+                                        case 'Correct_Count':records[I]['Correct_Count']=row[1];td.parent().find("td[data-id='Correct_Count']").html(row[1]);break;
+                                        case 'Correct_Mean':records[I]['Correct_Mean']=row[1];td.parent().find("td[data-id='Correct_Mean']").html(row[1]);break;
+                                        case 'Correct_Median':records[I]['Correct_Median']=row[1];td.parent().find("td[data-id='Correct_Median']").html(row[1]);break;
+                                        case 'Correct_Variance':records[I]['Correct_Variance']=row[1];td.parent().find("td[data-id='Correct_Variance']").html(row[1]);break;
+                                        case 'Correct_StdDev':records[I]['Correct_StdDev']=row[1];td.parent().find("td[data-id='Correct_StdDev']").html(row[1]);break;
+                                        case 'Correct_Skewness':records[I]['Correct_Skewness']=row[1];td.parent().find("td[data-id='Correct_Skewness']").html(row[1]);break;
+                                        case 'Correct_Kurtosis':records[I]['Correct_Kurtosis']=row[1];td.parent().find("td[data-id='Correct_Kurtosis']").html(row[1]);break;
+                                        case 'Wrong_Count':records[I]['Wrong_Count']=row[1];td.parent().find("td[data-id='Wrong_Count']").html(row[1]);break;
+                                        case 'Wrong_Mean':records[I]['Wrong_Mean']=row[1];td.parent().find("td[data-id='Wrong_Mean']").html(row[1]);break;
+                                        case 'Wrong_Median':records[I]['Wrong_Median']=row[1];td.parent().find("td[data-id='Wrong_Median']").html(row[1]);break;
+                                        case 'Wrong_Variance':records[I]['Wrong_Variance']=row[1];td.parent().find("td[data-id='Wrong_Variance']").html(row[1]);break;
+                                        case 'Wrong_StdDev':records[I]['Wrong_StdDev']=row[1];td.parent().find("td[data-id='Wrong_StdDev']").html(row[1]);break;
+                                        case 'Wrong_Skewness':records[I]['Wrong_Skewness']=row[1];td.parent().find("td[data-id='Wrong_Skewness']").html(row[1]);break;
+                                        case 'Wrong_Kurtosis':records[I]['Wrong_Kurtosis']=row[1];td.parent().find("td[data-id='Wrong_Kurtosis']").html(row[1]);;break;
+                                        case 'Start_time':records[I]['Start_time']=row[1];td.parent().find("td[data-id='Start_time']").html(row[1]);break;
+                                        //case 'STDVC_F':records[I]['STDVC_F']=row[1];td.parent().find("td[data-id='STDVC_F']").html(row[1]);break;
+                                        //case 'STDVM_F':records[I]['STDVM_F']=row[1];td.parent().find("td[data-id='STDVM_F']").html(row[1]);break;
+                                        //case 'SPDEV_F':records[I]['SPDEV_F']=row[1];td.parent().find("td[data-id='SPDEV_F']").html(row[1]);break;
+                                        //case 'STDVC_P1':records[I]['STDVC_P1']=row[1];td.parent().find("td[data-id='STDVC_P1']").html(row[1]);break;
+                                        //case 'STDVM_P1':records[I]['STDVM_P1']=row[1];td.parent().find("td[data-id='STDVM_P1']").html(row[1]);break;
+                                        //case 'SPDEV_P1':records[I]['SPDEV_P1']=row[1];td.parent().find("td[data-id='SPDEV_P1']").html(row[1]);break;
+                                        //case 'STDVC_P2':records[I]['STDVC_P2']=row[1];td.parent().find("td[data-id='STDVC_P2']").html(row[1]);break;
+                                        ////case 'STDVM_P2':records[I]['STDVM_P2']=row[1];td.parent().find("td[data-id='STDVM_P2']").html(row[1]);break;
+                                        //case 'SPDEV_P2':records[I]['SPDEV_P2']=row[1];td.parent().find("td[data-id='SPDEV_P2']").html(row[1]);break;
+                                        //case 'STDVC_P3':records[I]['STDVC_P3']=row[1];td.parent().find("td[data-id='STDVC_P3']").html(row[1]);break;
+                                        //case 'STDVM_P3':records[I]['STDVM_P3']=row[1];td.parent().find("td[data-id='STDVM_P3']").html(row[1]);break;
+                                        //case 'SPDEV_P3':records[I]['SPDEV_P3']=row[1];td.parent().find("td[data-id='SPDEV_P3']").html(row[1]);break;
+                                        //case 'STDVC_P4':records[I]['STDVC_P4']=row[1];td.parent().find("td[data-id='STDVC_P4']").html(row[1]);break;
+                                        //case 'STDVM_P4':records[I]['STDVM_P4']=row[1];td.parent().find("td[data-id='STDVM_P4']").html(row[1]);break;
+                                        //case 'SPDEV_P4':records[I]['SPDEV_P4']=row[1];td.parent().find("td[data-id='SPDEV_P4']").html(row[1]);break;
+                                    }
+                                }
+                            });
+                            reader.readAsText(file);
+                        }
+                        break;
+                    }
+                      _default_cell_render(records,I,field,td,set_value,source);
+                }
+                //-------------------------------------
+                //document.getElementById('PVT_File_Name').addEventListener('change', handleFileSelect,false);
+                //-------------------------------------
+                _before_submit=function(record,dbv){
+                    return _set_status_and_participant(record,dbv);
+                }
+                //-------------------------------------
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/module/grid.v1.css
+        #D__ID{
+            height:100%;
+            overflow:auto;
+            animation: vm_module_fadein 1.0s;
+            background-color: #fff;
+        }
+    </style>
+</div>

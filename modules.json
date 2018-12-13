@@ -61,7 +61,6 @@
 
 					"ABOVE ARE EXAMPLES ONLY":{},
 
-
 					"SCREENING VISIT":{},
 
 		"Screening_Medical_History": {
@@ -1439,14 +1438,14 @@
 
 
 		"9am_day_crt": {
-			"table_id": "20011120",
-			"url": "tasks/ethnicity.html",
+			"table_id": "1812131247",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/crt-data.html",
 			"task": "9am Choice Reaction Time",
 			"form_module": "9am_day_crt_form"
 		},
 		"9am_day_crt_form": {
-			"table_id": "20011120",
-			"url": "tasks/ethnicity.form.html"
+			"table_id": "1812131247",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/crt-form.html"
 		},
 		"11am_day_crt": {
 			"table_id": "20011120",

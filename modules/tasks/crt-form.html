@@ -1,0 +1,227 @@
+<div id=D__ID>
+	<section id=form_container__ID>
+		<div id=header__ID>
+			Consent
+		</div>
+		<form id=F__ID>
+			<div class="container">
+				<!-- participant part for all tsak forms -------------------->
+				<div class="row row__ID" id=row_participant__ID>
+					<div class="col-sm-12 col-lg-9 input__ID">
+						<span class=label__ID>Participant</span><br>
+						<input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+					</div>
+					<div class="col-sm-12 col-lg-3 input__ID">
+						<span class=label__ID>Participant ID</span><br>
+						<input type=text name="Participant_uid" class=form-control readonly />
+					</div>
+					<hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+				</div>
+				<!---------------------------------------------------->
+
+
+				<!-- Form Inputs-------------------------------------->
+		<div class="row">
+			<div class='row row__ID'>
+				<div class="col">
+				<span>Upload</span>
+					<div class="col-sm" id=Doc__ID data-id=Doc></div>
+				</div>
+			</div>
+		</div>
+
+				<div class='row row__ID'>
+		<div class="col">
+			<span>Premature Responses</span>
+			<input type=text class=form-control name=Premature_Responses>
+		</div>
+	</div>
+
+	<div class='row row__ID'>
+<div class="col">
+<span>Anticipated Responses</span>
+<input type=text class=form-control name=Anticipated_Responses>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Correct Count</span>
+<input type=text class=form-control name=Correct_Count>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Correct Mean</span>
+<input type=text class=form-control name=Correct_Mean>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Correct Median</span>
+<input type=text class=form-control name=Correct_Median>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Correct Variance</span>
+<input type=text class=form-control name=Correct_Variance>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Correct Standard Deviation</span>
+<input type=text class=form-control name=Correct_StdDev>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Correct Skewness</span>
+<input type=text class=form-control name=Correct_Skewness>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Correct Kurtosis</span>
+<input type=text class=form-control name=Correct_Kurtosis>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Wrong Count</span>
+<input type=text class=form-control name=Wrong_Count>
+</div>
+</div>
+<div class='row row__ID'>
+<div class="col">
+<span>Wrong Mean</span>
+<input type=text class=form-control name=Wrong_Mean>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Wrong Median</span>
+<input type=text class=form-control name=Wrong_Median>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Wrong Variance</span>
+<input type=text class=form-control name=Wrong_Variance>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Wrong Standard Deviation</span>
+<input type=text class=form-control name=Wrong_StdDev>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Wrong Skewness</span>
+<input type=text class=form-control name=Wrong_Skewness>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Wrong Kurtosis</span>
+<input type=text class=form-control name=Wrong_Kurtosis>
+</div>
+</div>
+
+<div class='row row__ID'>
+<div class="col">
+<span>Start Time</span>
+<input type=text class=form-control name=Start_time>
+</div>
+</div>
+				<!---------------------------------------------------->
+
+
+				<!-- submit button part for all tsak forms------------>
+				<br>
+				<div class="row">
+					<div class=col>
+						<button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+					</div>
+				</div>
+				<!---------------------------------------------------->
+			</div>
+		</form>
+	</section>
+	<script>
+		function F__ID(){
+			//-------------------------------------
+			VmInclude:__COMPONENT__/module/form.v1.js
+			VmInclude:__CURRENT_PATH__/task-form.js
+			//-------------------------------------
+			var load=m.load;
+			m.load=function(){
+				load();
+				var record=$vm.vm['__ID'].input.record;
+    			$vm.render_file_field_v2(record,'__ID',$('#Consent__ID'),function(size,lastModified){
+    				$('#Consent__ID').val(lastModified);
+    			});
+			}
+			//-------------------------------------
+		}
+	</script>
+	<style>
+		#D__ID{
+			height:100%;
+			overflow:auto;
+			animation: vm_module_fadein 1.0s;
+			background-color: #fff;
+		}
+		#form_container__ID{
+			margin-top:20px;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+			font-family: Verdana,sans-serif;
+			font-size: 15px;
+			line-height: 1.5;
+		}
+		#F__ID{
+			border:1px solid #bbb;
+			border-top-width: 0;
+			padding:6px 15px 20px 15px;
+		}
+		#header__ID{
+			background-color:#727b84;
+			color:#fff;
+			padding:10px 15px 10px 15px;
+			font-size:120%;
+			border:1px solid #bbb;
+			border-bottom-width: 0;
+		}
+		.row__ID{
+			padding:6px 0;
+		}
+		.row__ID:hover{
+			background-color: rgba(0,0,0,0.1);
+		}
+		.row__ID span{
+			font-weight:bold;
+			display: inline-block;
+			padding: 5px 0;
+		}
+		@media screen and (max-width:768px){
+			#form_container__ID{
+				padding:20px 10px 50px 10px;
+			}
+		}
+	</style>
+</div>
