@@ -21,14 +21,15 @@
 
 
 				<!-- Form Inputs-------------------------------------->
-		<div class="row">
-			<div class='row row__ID'>
-				<div class="col">
-				<span>Upload</span>
-					<div class="col-sm" id=Doc__ID data-id=Doc></div>
+				<div class="row">
+					<div class='row row__ID'>
+	    				<div class="col">
+	    					<span>Doc</span>
+	                        <div class="col-sm" id=Doc__ID data-id=Doc></div>
+	    				</div>
+	    			</div>
 				</div>
-			</div>
-		</div>
+				<!---------------------------------------------------->
 
 				<div class='row row__ID'>
 		<div class="col">
@@ -171,9 +172,29 @@
 			m.load=function(){
 				load();
 				var record=$vm.vm['__ID'].input.record;
-    			$vm.render_file_field_v2(record,'__ID',$('#Consent__ID'),function(size,lastModified){
-    				$('#Consent__ID').val(lastModified);
+    			$vm.render_file_field_v2(record,'__ID',$('#Doc__ID'),function(size,lastModified){
+					$('#Doc__ID').val(lastModified);
+					var file=$('#F__ID input[name=Doc]').prop('files')[0];
+					file_process(file,function(items){
+						$("#F__ID input[name='Premature_Responses']").val(items[1]);
+						$("#F__ID input[name='Anticipated_Responses']").val(items[2]);
+					});
     			});
+			}
+			//-------------------------------------
+			var file_process=function(file,callback){
+                var reader = new FileReader();
+                reader.onload = function(e) {
+					var contents = e.target.result;
+					var lines=contents.replace(/"/g,'').replace(/\r/,'\n').replace(/\n\n/,'\n').split('\n');
+					if(lines.length>2){
+						var last_line=lines[lines.length-2];
+						var items=last_line.split(',');
+						callback(items)
+					}
+					else alert("Wrong")
+				}
+				reader.readAsText(file);
 			}
 			//-------------------------------------
 		}
