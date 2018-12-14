@@ -110,15 +110,15 @@
 			"table_id": "1809051150",
 			"url": "https://shiftwork.rt.org.au/modules/tasks/mapi-form.html"
 		},
-		"screening_POMS": {
+		"Screening_POMS": {
 			"table_id": "20011120",
-			"url": "tasks/ethnicity.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pom.html",
 			"task": "Profile of Mood States questionnaire",
-			"form_module": "screening_POMS_form"
+			"form_module": "Screening_POMS_form"
 		},
-		"screening_POMS_form": {
+		"Screening_POMS_form": {
 			"table_id": "20011120",
-			"url": "tasks/ethnicity.form.html"
+			"url": "https://shiftwork.rt.org.au/modules/tasks/pom.form.html"
 		},
 		"screening_day_visitdate": {
 			"table_id": "1809112202",
