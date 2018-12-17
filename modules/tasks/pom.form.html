@@ -639,7 +639,8 @@
                 total+=parseFloat(record.pom16);
                 total+=parseFloat(record.pom23);
                 total+=parseFloat(record.pom28);
-                var total=record.POM_TEN.toFixed(2);
+
+                record.POM_TEN=total
 
                 var total=0;
                 total+=parseFloat(record.pom2);
@@ -647,7 +648,8 @@
                 total+=parseFloat(record.pom20);
                 total+=parseFloat(record.pom22);
                 total+=parseFloat(record.pom26);
-                var total=record.POM_ANG.toFixed(2);
+
+                record.POM_ANG=total
 
                 var total=0;
                 total+=parseFloat(record.pom3);
@@ -655,7 +657,8 @@
                 total+=parseFloat(record.pom27);
                 total+=parseFloat(record.pom30);
                 total+=parseFloat(record.pom39);
-                var total=record.POM_FAT.toFixed(2);
+
+                record.POM_FAT=total
 
                 var total=0;
                 total+=parseFloat(record.pom4);
@@ -665,7 +668,8 @@
                 total+=parseFloat(record.pom24);
                 total+=parseFloat(record.pom29);
                 total+=parseFloat(record.pom35);
-                var total=record.POM_DEP.toFixed(2);
+
+                record.POM_DEP=total
 
                 var total=0;
                 total+=parseFloat(record.pom5);
@@ -674,7 +678,8 @@
                 total+=parseFloat(record.pom25);
                 total+=parseFloat(record.pom31);
                 total+=parseFloat(record.pom40);
-                var total=record.POM_ERA.toFixed(2);
+
+                record.POM_ERA=total
 
                 var total=0;
                 total+=parseFloat(record.pom6);
@@ -682,7 +687,8 @@
                 total+=parseFloat(record.pom13);
                 total+=parseFloat(record.pom34);
                 total+=parseFloat(record.pom37);
-                var total=record.POM_VIG.toFixed(2);
+
+                record.POM_VIG=total
 
                 var total=0;
                 total+=parseFloat(record.pom7);
@@ -690,9 +696,10 @@
                 total+=parseFloat(record.pom32);
                 total+=parseFloat(record.pom36);
                 total+=parseFloat(record.pom38);
-                var total=record.POM_CON.toFixed(2);
 
-                record.TMD=(record.POM_TEN+record.POM_DEP+record.POM_ANG+record.POM_FAT+record.POM_CON)-(record.POM_VIG+record.POM_ERA);
+                record.POM_CON=total
+
+                record.TMD=(record.POM_TEN+record.POM_DEP+record.POM_ANG+record.POM_FAT+record.POM_CON)-(record.POM_VIG+record.POM_ERA)
 
 
                 return before_submit(record,dbv);
