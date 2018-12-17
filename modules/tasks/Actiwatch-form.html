@@ -8,7 +8,7 @@
                 <div class="row row__ID" id=row_participant__ID>
                     <div class="col-sm-12 col-lg-9 input__ID">
                         <span class=label__ID>Participant</span><br>
-                        <input type=text name="Participant" class=form-control id=Participant__ID name="Participant" />
+                        <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
                     </div>
                     <div class="col-sm-12 col-lg-3 input__ID">
                         <span class=label__ID>Participant ID</span><br>
@@ -38,6 +38,7 @@
     <script>
         function F__ID(){
             //-------------------------------------
+            //dynamic form
             var fields="Actiwatch_File_Name,Serial_No,Epoch,aTRT,aExcl,aBedtime,Bedtime_min,Bedtime_max,aRisetime,Risetime_min,Risetime_max,aTIB,aTIB_std,aTIB_min,aTIB_max,aTST_aTIB,aTST_aTIB_std,aTST_aTIB_min,aTST_aT"
             fields+="WAC_max,SAC,SAC_std,SAC_min,SAC_max,FI,FI_std,FI_min,FI_max,d_ST_24,d_ST_24_STD,AC 24 Ac/min|AC_24,AC 24 STD Ac/min|AC_24_STD,"
             fields+="Date_Rest_1,Bedtime_1,Risetime_1,aTIB_1,aTST_aTIB_1,SAC_1,Date_Sleep_1,aTST_1,aSOL_1,aWASO_1,FI_1,Date_Daily_1,d_ST_24_1,AC_24_1,Dur_24_1,Date_Active_1,Dur_Active_1,WAC_1,Date_Rest_2,Bedtime_2,Risetime_2,aTIB_2,aTST_aTIB_2,SAC_2,Date_Sleep_2,aTST_2,aSOL_2,aWASO_2,FI_2,Date_Daily_2,d_ST_24_2,AC_24_2,Dur_24_2,Date_Active_2,Dur_Active_2,WAC_2,Date_Rest_3,Bedtime_3,Risetime_3,aTIB_3,aTST_aTIB_3,SAC_3,Date_Sleep_3,aTST_3,aSOL_3,aWASO_3,FI_3,Date_Daily_3,d_ST_24_3,AC_24_3,"
@@ -62,23 +63,18 @@
             //-------------------------------------
             $('#F__ID').find('input[type=file]').on('change',function(evt){
                 var file = this.files[0];
-            $('#F__ID').find("input[name='Actiwatch_File_Name']").val(file.name);
-            read_file(file);
-
-            });
-
-            $('input[type=file]').on('change',function(evt){
-                var file = this.files[0];
+                $('#F__ID').find("input[name='Actiwatch_File_Name']").val(file.name);
                 var records=[{}]
                 file_process(file,records,0,function(){
-                    $('#r').html('');
-                    var txt="";
+                    //alert(records);
+                    //alert(JSON.stringify(records));
                     for(p in records[0]){
-                        txt+="<br>"+p+":"+records[0][p];
+                        $('#F__ID input[name='+p+']').val(records[0][p]);
                     }
-                    $('#r').html(txt);
-                });
-            })
+
+                })
+
+            });
             //-------------------------------------
             var file_process=function(file,records,I,callback){
                 var reader = new FileReader();
