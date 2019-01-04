@@ -34,7 +34,6 @@
 			"url": "https://shiftwork.rt.org.au/modules/participant-and-others/participant-login-setup.html"
 		},
 
-
 		"Screening_Medical_History": {
 			"table_id": "91000197",
 			"url": "https://shiftwork.rt.org.au/modules/tasks/medical-history.html",
@@ -147,7 +146,6 @@
 			"url": "https://shiftwork.rt.org.au/modules/tasks/visit-date-form.html",
 			"task": "Visit Date"
 		},
-
 		"day_actiwatch": {
 			"table_id": "91000207",
 			"url": "https://shiftwork.rt.org.au/modules/tasks/Actiwatch.html",
@@ -197,7 +195,7 @@
 		},
 		"night3_ausedupload": {
 			"table_id": "91000214",
-			"url": "tasks/ethnicity.html",
+				"url": "tasks/ethnicity.html",
 			"task": "AusEd Upload Night Shift 3"
 		},
 
@@ -223,12 +221,9 @@
 		},
 		"night1_psgupload": {
 			"table_id": "91000219",
-			"url": "tasks/PSG2018.html",
+			"url": "https://shiftwork.rt.org.au/modules/tasks/PSG2018.html",
 			"task": "PSG Upload Night Shift 1"
 		},
-
-
-
 		"7am_day_hungerappetite": {
 			"table_id": "91000220",
 			"url": "https://shiftwork.rt.org.au/modules/tasks/hungerappeptite.html",
