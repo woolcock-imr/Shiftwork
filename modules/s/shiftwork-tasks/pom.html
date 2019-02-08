@@ -1,0 +1,34 @@
+<div id=D__ID>
+    <section>
+        VmInclude:__COMPONENT__/g/grid.01.html
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js
+            VmInclude:__CURRENT_PATH__/task-data.js
+            //-------------------------------------
+            var fields="pom1,pom2,pom3,pom4,pom5,pom6,pom7,pom8,pom9,pom10,pom11,pom12,pom13,pom14,pom15,pom16,pom17,pom18,pom19,pom20,pom21,pom22,pom23,pom24,pom25,pom26,pom27,pom28,pom29,pom30,pom31,pom32,pom33,pom34,pom35,pom36,pom37,pom38,pom39,pom40,POM_TEN,POM_ANG,POM_FAT,POM_DEP,POM_ERA,POM_VIG,POM_CON,TMD";
+            m.fields="_Form,Status|S3,Notes|NT,Participant_ID|Participant_uid,Participant,"+fields+",Submit Date|DateTime,Submitted by|Author,_Delete";
+            m.form_fields="Participant_uid,Participant,"+fields;
+            //-------------------------------------
+            var before_submit=m.before_submit
+            m.before_submit=function(record,dbv){
+                if(record.ESS_1!='' && record.ESS_2!='' && record.ESS_3!='' && record.ESS_4!='' && record.ESS_5!='' && record.ESS_6!='' && record.ESS_7!='' && record.ESS_8!=''){
+                    record.ESS=(parseInt(record.ESS_1)+parseInt(record.ESS_2)+parseInt(record.ESS_3)+parseInt(record.ESS_4)+parseInt(record.ESS_5)+parseInt(record.ESS_6)+parseInt(record.ESS_7)+parseInt(record.ESS_8)).toString();
+                }
+                return before_submit(record,dbv)
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+        #D__ID{
+            height:100%;
+            overflow:auto;
+            animation: vm_module_fadein 1.0s;
+            background-color: #fff;
+        }
+    </style>
+</div>
